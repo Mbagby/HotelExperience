@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'rooms/index'
+
+  get 'rooms/new'
+
+  get 'rooms/show'
+
+  get 'rooms/edit'
+
   get 'hotel/index'
 
   get 'hotel/edit'
