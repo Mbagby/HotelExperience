@@ -1,0 +1,40 @@
+<div class= "vegasBackground">
+<div class="ui center aligned grid">
+  <div class="alligned">
+    <h2 id= "loginSignupHead" class="ui image header">
+      <div class="content">
+        Login To Your Account
+      </div>
+    </h2>
+    <div class="ui large form">
+    <%= form_tag login_path do %>
+      <div id= "box" class="ui stacked segment">
+        <div class="field">
+          <div class="ui left icon input">
+            <%= label_tag "Email" %>
+			<%= text_field_tag :email%>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui left icon input">
+            <%= label_tag "Password" %>
+			<%= password_field_tag :password%>
+          </div>
+        </div>
+        <p><%= link_to "Forgot your password?", new_reset_path, class: "linkColor"%></p>
+        <div>
+			  <%= submit_tag "Log In", id: "loginButton",class: "ui fluid large submit button"%>
+		</div>
+		 <% end %>
+      </div>
+
+      <div class="ui error message"></div>
+
+    </div>
+
+    <div id= "box" class="ui message alignCenter">
+      <%= link_to "Sign Up", signup_path , class: "linkColor"%>
+    </div>
+  </div>
+</div>
+</div>

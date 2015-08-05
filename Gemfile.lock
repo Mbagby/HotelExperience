@@ -275,6 +275,7 @@ DEPENDENCIES
   json
   nokogiri
   pg
+  pry
   pry-rails
   puma
   puma-rails
