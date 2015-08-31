@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   	@user = User.find_by_id(params[:user_id])
   	@hotels = hotel.all
   	@rooms = room.all
-  	@work_order = work_order.all
+  	@workOrders = work_order.all
   end
 
   def show

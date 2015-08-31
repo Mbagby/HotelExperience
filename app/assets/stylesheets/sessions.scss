@@ -2,3 +2,48 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+#pageContent{
+	opacity: 50%;
+}
+.vegasBackground{
+	background-image: url("Mountain");
+	background-repeat:no-repeat;
+	background-size: cover;
+	float: center;
+	height: 100%;
+	width: 100%;
+	overflow-x: hidden;
+}
+
+#loginSignupHead{
+	margin-top: 50%;
+	color: #D9A134;
+	font-size: 20px;
+	padding-left: 20px;
+	padding-top: 6px;
+	padding-bottom: 7px;
+	padding-right:20px;
+}
+
+.alignCenter{
+	text-align: center;
+}
+
+#loginButton{
+	background-image: linear-gradient(to bottom right, #D9A134, #f2edb6);
+	color: white;
+}
+
+.content{
+	background-color: white;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-right: 10px; 
+	padding-left:10px; 
+	border-radius: 3px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.linkColor{
+	color:#D9A134;
+}

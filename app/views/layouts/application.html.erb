@@ -5,12 +5,72 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 </head>
 <body>
-<div>
+<div class="ui left fixed vertical menu">
+  <div class="item" id ="logo"></div>
+  <div id= "menu">
+  <a class="item" title="View Your Profile">
+  	<i class="user icon"></i>
+  	My Profile
+  </a>
+  <a class="item" title="Order Room Service">
+  	<i class="cocktail icon"></i>
+  	Room Service
+  </a>
+   <a class="item" title="Submit A Maintance Request">
+  	<i class="warning sign icon"></i>
+  	Maintance
+  </a>
+   <a class="item" title="Set A Time For Housekeeping">
+  	<i class="home icon"></i>
+  	Housekeeping
+  </a>
+   <a class="item" title="Make A Spa Reservation">
+  	<i class="leaf icon"></i>
+  	Spa
+  </a>
+   <a class="item" title="Make A Dining Reservation">
+  	<i class="food icon"></i>
+  	Dining Reservations
+  </a>
+  <a class="item" title="Place A Do Not Disturb Hold">
+  	<i class="privacy icon"></i>
+  	Do Not Disturb
+  </a>
+  <a class="item" title="Review Your Room Charges">
+  	<i class="calculator icon"></i>
+  	Bill Review
+  </a>
+  <a class="item" title="Need Assistance? Connect With The Front Desk">
+  	<i class="wechat icon"></i>
+  	Front Desk Chat
+  </a>
+  </div>
 </div>
 
-<div  class = "ui button"><%= link_to "Sign Out", logout_path, method: :delete %></div>
+<div class="mainBody">
+<div class="ui secondary pointing left menu" id="topMenu">
+  		<a class="active item"<%= link_to "Home", user_path(session[:user_id]) %>
+  		</a>
+  		<div class="item"> <%= link_to "My Stays", user_stays_path(session[:user_id]) %>
+  		</div>
+  		<a class = "item" <%= link_to "Logout", logout_path, method: :delete %>
+  		</a> 
+  		<div class="right menu">
+  		<div class="ui search" id="search">
+  			<div class="ui icon input">
+    		<input class="prompt" type="text" placeholder="Search...">
+   			 <i class="search icon"></i>
+  			</div>
+  			<div class="results"></div>
+		  </div>
+		  </div>
+</div>
+</div>
+
+
 <%= yield %>
 
 </body>
