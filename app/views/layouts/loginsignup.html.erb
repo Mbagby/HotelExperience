@@ -52,27 +52,15 @@
 
 <div class="mainBody">
 <div class="ui secondary pointing left menu" id="topMenu">
-
-      <% if current_page?(user_path(session[:user_id]))%>
-       <div id="item" class = "active item">
-      <%else %>
-       <div id="item" class = "item">
-      <%end %>
+  		<div id="item" class = "item" >
         <%= link_to "Home", user_path(session[:user_id]) %>
-      </div> 
-      
-      <% if current_page?(user_stays_path(session[:user_id]))%>
-       <div id="item" class = "active item">
-      <%else %>
-       <div id="item" class = "item">
-      <%end %> 
+  		</div>
+  		<div id="item" class="item"> 
         <%= link_to "My Stays", user_stays_path(session[:user_id]) %>
-      </div>
-
+  		</div>
   		<div id="item" class = "item" >
         <%= link_to "Logout", logout_path, method: :delete %>
   		</div> 
-
   		<div class="right menu">
   		<div class="ui search" id="search">
   			<div class="ui icon input">

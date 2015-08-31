@@ -1,3 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HotelExperience</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
 <div class= "vegasBackground">
 <div class="ui center aligned grid">
   <div class="alligned">
@@ -8,7 +19,6 @@
     </h2>
     <div class="ui large form">
       <div id="box" class="ui stacked segment">
-
       <%= form_for @user, url: signup_path do |f| %>
         <div class="field">
           <div class="form-group">
@@ -54,3 +64,6 @@
   </div>
 </div>
 </div>
+
+</body>
+</html>

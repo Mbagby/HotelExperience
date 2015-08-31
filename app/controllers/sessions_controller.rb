@@ -1,9 +1,11 @@
 class SessionsController < ApplicationController
   def login
+    render :layout => false 
   end
 
   def signup
-  	@user = User.new
+    @user = User.new
+    render :layout => false 
   end
 
   def create
