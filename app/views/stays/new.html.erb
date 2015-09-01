@@ -1,2 +1,71 @@
+<div class="mainBody">
+
 <h1>Stay#new</h1>
 <p>Find me in app/views/stay/new.html.erb</p>
+<h3> Form </h3>
+
+<div id="stayForm" class="ui form">
+
+
+<%= form_for @stay, url: user_stays_path(@user), html: { class: "", id: "" } do |f| %>
+
+	<div id= "title">
+		<h4 class = "labels">Title Your Stay</h4>
+		<%= f.text_field :title %>
+	</div>
+
+	<div class="twoBlock" >
+		<h4 class= "labels">Hotel</h4>
+		<%= f.collection_select(:hotel_id, @hotels, :id, :name, {prompt: "	Hotel"}, {:class => 'ui dropdown'}) %>
+	</div>
+	
+	<div class="twoBlock">
+		<h4 class= "labels">Room</h4>
+		<%= f.collection_select(:room_id, @rooms, :id, :number, {prompt: "	Room Number"}, {:class => 'ui dropdown'}) %>
+	</div>
+
+
+	<div class="twoBlock">
+		<h4 class= "labels">Checkin Date</h4>
+   		<div class="form-group" >
+    	    <div class='input-group date' id='datetimepicker6'>
+    	    	<%= f.text_field(:checkin, class: "glyphicon glyphicon-calendar", id: "calendar" )%>
+    	    	<span class="input-group-addon">
+    	    	        <span class="glyphicon glyphicon-calendar"></span>
+    	   		</span>
+    	    </div>
+   		</div>
+   	</div>
+   	<div class="twoBlock">
+   		<h4 class= "labels">Checkout Date</h4>
+   		<div class="form-group">
+    	    <div class='input-group date' id='datetimepicker7'>
+    	    	<%= f.text_field(:checkout, class: "form-control", id: "calendar" )%>
+    	    	<span class="input-group-addon">
+    	    	        <span class="glyphicon glyphicon-calendar"></span>
+    	   		</span>
+    	    </div>
+   		</div>
+   	</div>
+
+
+
+
+
+<div id="submitStay">
+<%= f.submit "Add Your Stay" %>
+</div>
+
+<% end %>
+
+
+
+
+
+
+</div>
+
+</div>
+
+
+</div>

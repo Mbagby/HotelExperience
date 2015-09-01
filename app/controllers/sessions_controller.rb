@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
     @user = User.create user_params
     if @user.save
       session[:user_id] = @user.id
-      redirect_to user_path(@user), flash: {success: "Created!"} 
+      redirect_to users_path, flash: {success: "Created!"} 
       #does @user need to be @user.id?
     else
       redirect_to signup_path, flash: {error: @user.errors.full_messages}
@@ -24,7 +24,7 @@ class SessionsController < ApplicationController
       @found_user = User.find_by_email params[:email]
       if @found_user && @found_user.authenticate(params[:password])
         session[:user_id] = @found_user.id
-        redirect_to user_path(@found_user)
+        redirect_to users_path
       else
         flash[:alert] = "username / password combination is invalid"
         redirect_to login_path(@user)

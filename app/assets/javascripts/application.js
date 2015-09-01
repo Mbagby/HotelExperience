@@ -19,3 +19,28 @@
 // Loads all Semantic javascripts
 //= require semantic-ui
 
+//= require moment
+//= require bootstrap-datetimepicker
+
+
+
+$(window).load(function() {
+
+$('.ui.dropdown')
+  .dropdown()
+;
+
+$(function () {
+        $('#datetimepicker6').datetimepicker({useCurrent: true});
+        $('#datetimepicker7').datetimepicker({
+            useCurrent: false
+        });
+        $("#datetimepicker6").on("dp.change", function (e) {
+            $('#datetimepicker7').data("DateTimePicker").minDate(e.date);
+        });
+        $("#datetimepicker7").on("dp.change", function (e) {
+            $('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
+        });
+    });
+
+});

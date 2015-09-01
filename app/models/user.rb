@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
 
 	has_many :hotels
 	has_many :rooms
+	has_many :stays
 	has_many :work_orders
 
     def generate_password_reset_token!

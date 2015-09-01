@@ -6,7 +6,6 @@ class CreateHotels < ActiveRecord::Migration
       t.text :address
       t.text :image_url
       t.text :website_url
-      t.text :description
       t.string :latitude
       t.string :longitude
 

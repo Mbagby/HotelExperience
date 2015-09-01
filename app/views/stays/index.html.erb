@@ -1,2 +1,30 @@
+<div class="mainBody">
+
 <h1>Stay#index</h1>
 <p>Find me in app/views/stay/index.html.erb</p>
+<%= @user.id %>
+
+
+<% @stays.each do |stay| %>
+	<% if stay.user_id.to_i == session[:user_id]%>
+ 	<div>
+		<h2> <%= stay.title %> </h2>
+		<h2> <%= stay.user_id %> </h2>
+	</div>
+	<div>
+		<span>Checkin: <%= stay.checkin %></span>
+		<span>Checkin: <%= stay.checkout %></span>
+	</div>
+	<div>
+		<%= stay.hotel_id %>
+	</div> 
+<% end %>
+
+<% end %>
+
+
+
+<div><%= link_to "New Stay", new_user_stay_path(@user.id) %></div>
+
+
+</div>

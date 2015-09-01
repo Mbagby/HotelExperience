@@ -43,6 +43,11 @@ gem 'bcrypt', '~> 3.1.7'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+#For Date Picker
+gem 'bootstrap-sass', '3.2.0.2'
+gem 'momentjs-rails', '>= 2.10.03'
+gem 'bootstrap3-datetimepicker-rails', '~> 4.15.35'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'

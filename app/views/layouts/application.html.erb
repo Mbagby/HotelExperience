@@ -2,65 +2,68 @@
 <html>
 <head>
   <title>HotelExperience</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 </head>
+
+
 <body>
 <div class="ui left fixed vertical menu">
   <div class="item" id ="logo"></div>
   <div id= "menu">
-  <a class="item" title="View Your Profile">
+  <div class="item" title="View Your Profile">
+
   	<i class="user icon"></i>
-  	My Profile
-  </a>
-  <a class="item" title="Order Room Service">
+  	<%= link_to "My Profile", user_path(session[:user_id]) %>
+  </div>
+  <div class="item" title="Order Room Service">
   	<i class="cocktail icon"></i>
   	Room Service
-  </a>
-   <a class="item" title="Submit A Maintance Request">
+  </div>
+   <div class="item" title="Submit A Maintance Request">
   	<i class="warning sign icon"></i>
   	Maintance
-  </a>
-   <a class="item" title="Set A Time For Housekeeping">
+  </div>
+   <div class="item" title="Set A Time For Housekeeping">
   	<i class="home icon"></i>
   	Housekeeping
-  </a>
-   <a class="item" title="Make A Spa Reservation">
+  </div>
+   <div class="item" title="Make A Spa Reservation">
   	<i class="leaf icon"></i>
   	Spa
-  </a>
-   <a class="item" title="Make A Dining Reservation">
+  </div>
+   <div class="item" title="Make A Dining Reservation">
   	<i class="food icon"></i>
   	Dining Reservations
-  </a>
-  <a class="item" title="Place A Do Not Disturb Hold">
+  </div>
+  <div class="item" title="Place A Do Not Disturb Hold">
   	<i class="privacy icon"></i>
   	Do Not Disturb
-  </a>
-  <a class="item" title="Review Your Room Charges">
+  </div>
+  <div class="item" title="Review Your Room Charges">
   	<i class="calculator icon"></i>
   	Bill Review
-  </a>
-  <a class="item" title="Need Assistance? Connect With The Front Desk">
+  </div>
+  <div class="item" title="Need Assistance? Connect With The Front Desk">
   	<i class="wechat icon"></i>
   	Front Desk Chat
-  </a>
+  </div>
   </div>
 </div>
 
 <div class="mainBody">
 <div class="ui secondary pointing left menu" id="topMenu">
 
-      <% if current_page?(user_path(session[:user_id]))%>
+      <% if current_page?(users_path)%>
        <div id="item" class = "active item">
       <%else %>
        <div id="item" class = "item">
       <%end %>
-        <%= link_to "Home", user_path(session[:user_id]) %>
+        <%= link_to "Home", users_path %>
       </div> 
-      
+
       <% if current_page?(user_stays_path(session[:user_id]))%>
        <div id="item" class = "active item">
       <%else %>

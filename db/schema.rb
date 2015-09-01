@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150831163540) do
+ActiveRecord::Schema.define(version: 20150901193038) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,7 +34,10 @@ ActiveRecord::Schema.define(version: 20150831163540) do
     t.string   "tower"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "hotel_id"
   end
+
+  add_index "rooms", ["hotel_id"], name: "index_rooms_on_hotel_id", using: :btree
 
   create_table "stays", force: :cascade do |t|
     t.string   "title"
@@ -42,7 +45,14 @@ ActiveRecord::Schema.define(version: 20150831163540) do
     t.string   "checkout"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "room_id"
+    t.integer  "hotel_id"
+    t.integer  "user_id"
   end
+
+  add_index "stays", ["hotel_id"], name: "index_stays_on_hotel_id", using: :btree
+  add_index "stays", ["room_id"], name: "index_stays_on_room_id", using: :btree
+  add_index "stays", ["user_id"], name: "index_stays_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "first_name"
@@ -62,4 +72,8 @@ ActiveRecord::Schema.define(version: 20150831163540) do
     t.datetime "updated_at",  null: false
   end
 
+  add_foreign_key "rooms", "hotels"
+  add_foreign_key "stays", "hotels"
+  add_foreign_key "stays", "rooms"
+  add_foreign_key "stays", "users"
 end
