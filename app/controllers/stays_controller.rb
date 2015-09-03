@@ -15,8 +15,8 @@ class StaysController < ApplicationController
   end
 
   def create
-  	@stay = Stay.create(stay_params)
-  	@user = User.find_by_id(session[:user_id])
+    @user = User.find_by_id(session[:user_id])
+  	@stay = @user.stays.create(stay_params)
   	if @stay
   		redirect_to user_stays_path(session[:user_id]), flash: {success: "Created!"}
     else
