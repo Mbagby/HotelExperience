@@ -2,9 +2,9 @@ class StaysController < ApplicationController
 
   def index
   	@user = User.find_by_id(params[:user_id])
-  	@stays = Stay.order('checkin')
-    @hotel = Hotel.find_by_id(params[:hotel_id])
+  	@stays = @user.stays.order('checkin')
     @room = Room.find_by_id(params[:room_id])
+
   end	
 
   def new

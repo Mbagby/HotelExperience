@@ -6,7 +6,6 @@
 
 
 <% @stays.each do |stay| %>
-	<% if stay.user_id.to_i == session[:user_id]%>
  	<div>
 		<h2> <%= stay.title %> </h2>
 		<h2> <%= stay.user_id %> </h2>
@@ -18,8 +17,8 @@
 	<div>
 		<%= stay.hotel_id %>
 	</div> 	
-<% end %>
-
+	<div id="hotelStayPic">
+<img src = <%=Hotel.find_by_id(stay.hotel_id).image_url%> style="width:100px" ></img>
 <% end %>
 
 
