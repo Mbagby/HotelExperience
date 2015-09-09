@@ -20,14 +20,14 @@
       <div id= "box" class="ui stacked segment">
         <div class="field">
           <div class="ui left icon input">
-            <%= text_field_tag :email, placeholder='Email'%>
+            <%= text_field_tag :email, nil, :placeholder=>'Email'%>
           <i class="user icon"></i>
           </div>
         </div>
         <div class="field">
           <div class="ui left icon input">
-          <i class="lock icon"></i>
-			     <%= password_field_tag :password, placeholder= "Password"%>
+			     <%= password_field_tag :password, nil, :placeholder=> "Password"%>
+           <i class="lock icon"></i>
           </div>
         </div>
         <p><%= link_to "Forgot your password?", new_reset_path, class: "linkColor"%></p>
