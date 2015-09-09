@@ -44,6 +44,41 @@
     <div id= "box" class="ui message alignCenter">
       <%= link_to "Sign Up", signup_path , class: "linkColor"%>
     </div>
+
+
+    <% if !flash.empty? %>
+      <div class="ui basic modal">
+
+        <i class="close icon"></i>
+
+        <div class="ui icon header">
+          <i class="thumbs down icon"></i>
+          <h3>Nope Nope Nope!</h3>
+        </div>
+      
+        <div class="content">
+          <div class="description">
+            <p><i class="help icon"></i>Is that really your email address? </p>
+            <p><i class="spy icon"></i>Your password might be a pet's, SO's, or a highschool celebrity crush's name. </p>
+            <p><i class="child icon"></i>Better yet, ask a sibling, significant other, or parent. They will know it.</p>
+            <p><i class="meh icon"></i>Wait. Do you even have an account? Didn't think so. Go sign up.</p>
+          </div>
+        </div>
+      
+        <div class="actions">
+            <div class="ui green basic inverted button">
+                  <i class="warning icon"></i>
+                 I'll do better next time, I promise!
+            </div>
+        </div>
+      </div>
+      
+  </div>
+      
+      
+   <% end %> 
+
+
   </div>
 </div>
 </div>
