@@ -19,6 +19,7 @@
     </h2>
     <div class="ui large form">
       <div id="box" class="ui stacked segment">
+
       <%= form_for @user, url: signup_path do |f| %>
         <div class="field">
           <div class="form-group">
@@ -41,29 +42,57 @@
         <div class="field">
           <div class="form-group">
             <%= f.label :password %>
-            <%= f.text_field :password %>          
+            <%= f.password_field :password %>          
           </div>
         </div>
         <div>
           <%= f.submit "Sign Up", id: "loginButton",class: "ui fluid large submit button"%>
         </div>
       <% end %>
-      </div>
 
-      <div class="ui error message">
-        <% flash.each do |key, value| %>
-          <%= content_tag(:div, value, class: "alert#{key}")%>
-        <% end %>
       </div>
-
     </div>
 
     <div id= "box" class="ui message alignCenter">
       <%= link_to "Log In", login_path, class: "linkColor" %>
     </div>
+
+    <% if !flash.empty? %>
+      <div class="ui basic modal">
+
+        <i class="close icon"></i>
+
+        <div class="ui icon header">
+          <i class="warning icon"></i>
+          <h3>Oh No!</h3>
+        </div>
+      
+        <div class="content">
+          <div class="description">
+            <p><i class="mail icon"></i>...did you submit a valid email address? </p>
+            <p><i class="lock icon"></i>...did you submit a password longer than eight characters? </p>
+            <p><i class="meh icon"></i>...ya...didn't think so, go try again</p>
+          </div>
+        </div>
+      
+        <div class="actions">
+            <div class="ui green basic inverted button">
+                  <i class="checkmark icon"></i>
+                 I'll do better next time, I promise!
+            </div>
+        </div>
+      </div>
+      
   </div>
+      
+      
+   <% end %> 
+
+
 </div>
 </div>
+
+
 
 </body>
 </html>
