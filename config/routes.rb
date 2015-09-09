@@ -15,6 +15,7 @@ end
   #what is this???
   resources :resets, only: [:new, :edit, :create, :update]
 
+get "/", to: "sessions#login"
   #login
   get 'login', to: "sessions#login", as: "login"
   post 'login', to: "sessions#attempt_login"
