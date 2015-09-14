@@ -33,6 +33,7 @@ $('.ui.basic.modal')
   .modal('show')
 ;
 
+   
 
 $(function () {
         $('#datetimepicker6').datetimepicker({useCurrent: true});

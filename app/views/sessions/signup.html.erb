@@ -5,44 +5,41 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
-<div class= "vegasBackground">
+<div class= "pictureBackground">
 <div class="ui center aligned grid">
-  <div class="alligned">
-    <h2 id= "loginSignupHead" class="ui image header">
+  <div class="alligned" id="pageContent">
+    <h2 id= "signupHead" class="ui image header">
       <div class="content">
         Signup For An Account
       </div>
     </h2>
-    <div class="ui large form">
-      <div id="box" class="ui stacked segment">
+    <div class="ui large form" id="boxSignup">
+      <div class="ui stacked segment">
 
       <%= form_for @user, url: signup_path do |f| %>
         <div class="field">
           <div class="form-group">
-            <%= f.label :first_name %>
-            <%= f.text_field :first_name %>
+            <%= f.text_field :first_name, :placeholder => "First Name"%>
           </div>
       </div>
         <div class="field">
           <div class="form-group">
-            <%= f.label :last_name %>
-            <%= f.text_field :last_name %>
+            <%= f.text_field :last_name, :placeholder => "Last Name" %>
           </div>
         </div>
         <div class="field">
           <div class="form-group">
-            <%= f.label :email %>
-            <%= f.text_field :email %>
+            <%= f.text_field :email, :placeholder => "Email Address" %>
           </div>
         </div>
         <div class="field">
           <div class="form-group">
-            <%= f.label :password %>
-            <%= f.password_field :password %>          
+            <%= f.password_field :password, :placeholder => "Password" %>          
           </div>
         </div>
         <div>
@@ -53,8 +50,8 @@
       </div>
     </div>
 
-    <div id= "box" class="ui message alignCenter">
-      <%= link_to "Log In", login_path, class: "linkColor" %>
+    <div id= "linkTo" class="ui message alignCenter">
+      <%= link_to "Log In", login_path %>
     </div>
 
     <% if !flash.empty? %>
