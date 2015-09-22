@@ -1,31 +1,90 @@
 
-<div class="mainBody">
+
 
 
 <div id= "profileInfo">
 	<div id= "profileImage">
 		<%= image_tag "http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-6.jpg" %>
+		<button id="profileButton" class="ui icon button" title="Change Your Profile Picture">
+  		<i class="photo icon"></i>
+		</button>
 	</div>
 	<div id="basicProfileInfo">
-		<h1>
+		<h1 id="firstLastName">
 		<%= @user.first_name %>
 		<span><%= @user.last_name %></span>
 		</h1>
-		<h3><%= @user.email %></h3>
+		<h3 id="email"><%= @user.email %></h3>
 	</div>
 	<div class="ui divider"></div>
 	
 	<div id="lastestStays">
-		<h1> View Your Latest Stays!</h1>
+
+	<% @stays.each do |stay| %>
+		<div class ="stays">
+	 		<div>
+				<h2> <%= stay.title %> </h2>
+				<h2> <%= stay.user_id %> </h2>
+			</div>
+			<div>
+				<span>Checkin: <%= stay.checkin %></span>
+				<span>Checkin: <%= stay.checkout %></span>
+			</div>
+			<div>
+				<%= stay.hotel_id %>
+			</div> 	
+		</div>
+	<% end %>
+
 	</div>
 
 </div>
 
 
+<div class="ui modal">
+  <i class="close icon"></i>
+  <div class="header">
+    Profile Picture
+  </div>
+  <div class="image content">
+    <div class="ui medium image">
+      <img src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-6.jpg">
+    </div>
+    <div class="description">
+      <div class="ui header">We've chosen a kickass profile image for you.</div>
+      <p>In case you do not appreciate our efforts, feel free to add your own profile picture</p>
+      
+      <%= form_for @user, :url => { :action => :update } do |f|  %>
 
 
+      <div class="field">
+          <div class="ui left icon input">
+          <%= f.label :image %>
+           <%=f.text_field :image%>
+          <i class="photo icon"></i>
+          </div>
+       </div>
 
+
+        
+
+    </div>
+  </div>
+  <div class="actions">
+    <div class="ui black deny button" id= "exitButton">
+      Meh, yours is better.
+    </div>
+
+    <div class="ui positive right labeled button">
+      <%= f.submit "Update Profile Picture" %>
+    </div>
+
+  </div>
+  <% end %>
 </div>
+
+
+
 
 
 

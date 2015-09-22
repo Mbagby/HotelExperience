@@ -264,5 +264,34 @@
 			border-radius: 3px;
 		}
 	}
+	#profileInfo{
+		width: 100%;
+		height: 560px;
+		border: 2px solid #E5E5E5;
+		margin-top: 10px;
+		border-radius: 5px;
+		text-align: top;
+		#basicProfileInfo{
+			display: inline-block;
+			text-align: right;
+			float: right;
+			margin-top: 7px;
+			margin-right: 7px;
+			#firstLastName{
+				font-size: 20px;
+			}
+			#email{
+				font-size: 15px;
+			}
+		}
+		img{
+			width: 120px;
+			border-radius: 5px;
+		}
+		#profileImage{
+			display: inline-block;
+	
+		}
+	}
 }
 

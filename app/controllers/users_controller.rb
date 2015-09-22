@@ -10,15 +10,19 @@ class UsersController < ApplicationController
   end
 
   def show
+    @user = User.find_by_id(session[:user_id])
+    @stays = @user.stays.order('checkin')
   end
 
   def edit
+    @user= User.find_by_id(session[:user_id])
   end
 
   def update
-    @user.update user_params
+    @user = User.find_by_id(session[:user_id])
+    @user.update_attribute(:image, user_params)
     if @user.save
-      redirect_to user_path, flash: {success: "#{@user.username} updated!"}
+      redirect_to users_path(@user), flash: {success: "#{@user.username} updated!"}
     else
       render :edit
     end

@@ -243,57 +243,77 @@
 			border-radius: 3px;
 		}
 	}
-}
-
-
-
-#logo{
-	background-image: url("PlainLogo");
-	background-size: cover;
-	height: 80px;
-	width: 17rem;
-}
-#menu{
-	background-image: url("Mountain.jpg");
-	background-repeat:no-repeat;
-	background-size: cover;
-	height:100%;
-	width: 17rem;
-}
-.sidebar{
-	position:fixed;
-}
-
-
-
-
-#dividerTop{
-	width:79%;
-}
-
-
-
-#profileInfo{
-	width: 79%;
-	height: 560px;
-	border: 2px solid #E5E5E5;
-	margin-top: 10px;
-	border-radius: 5px;
-	text-align: top;
-	#basicProfileInfo{
-		display: inline-block;
-		text-align: right;
-		float: right;
-		margin-right: 20px;
-
+	#logo{
+		background-image: url("PlainLogo");
+		background-size: cover;
+		height: 80px;
+		width: 17rem;
 	}
-	img{
-		width: 250px;
+	#menu{
+		background-image: url("Mountain.jpg");
+		background-repeat:no-repeat;
+		background-size: cover;
+		height:100%;
+		width: 17rem;
+	}
+	.sidebar{
+		position:fixed;
+	}
+
+	#dividerTop{
+		width:79%;
+	}
+	#profileInfo{
+		position: relative;
+		width: 79%;
+		border: 2px solid #E5E5E5;
+		margin-top: 10px;
+		border-radius: 5px;
+		text-align: top;
+		#basicProfileInfo{
+			display: inline-block;
+			text-align: right;
+			float: right;
+			margin-right: 20px;
+	
+		}
+		#profileImage{
+			img{
+				width: 250px;
+				border-radius: 5px;
+				display: inline-block;
+				position: relative;
+			}
+			#profileButton{
+				position: absolute;
+				top: 0px;
+				left:0px;
+				width: 35px;
+				height: 35px;
+			}	
+		}
+		#profileImage{
+			display: inline-block;
+	
+		}
+	}
+	#latestStays{
+		width: 78%;
+	}
+	.stays{
+		display: inline-block;
+		vertical-align: top;
+		margin: 1.5%;
+		width: 30%;
+		height: 200px;
+		border: 2px solid #E5E5E5;
 		border-radius: 5px;
 	}
-	#profileImage{
-		display: inline-block;
-
-	}
 }
+
+
+
+
+
+
 
