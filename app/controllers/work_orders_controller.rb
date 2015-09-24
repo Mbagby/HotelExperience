@@ -1,21 +1,20 @@
 class WorkOrdersController < ApplicationController
 
   def index
-  	@user = User.find_by_id([:user_id])
-  	@workOrders = WorkOrder.all
+  	@workOrders = WorkOrder.all.order('created_at')
+    @stay = Stay.find_by_id(params[:stay_id])
+    @user = User.find_by_id(session[:user_id])
   end
 
   def new
   	@user = User.find_by_id([:user_id])
   	@hotel = Hotel.find_by_id([:hotel_id])
   	@room = Room.find_by_id([:room_id])
-  	@workOrder = @user.workOrders.new
   end
 
   def create
   	@user = User.find_by_id([:user_id])
-  	@hotel = Hotel.find_by_id([:hotel_id])
-  	@room = Room.find_by_id([:room_id])
+  	@stay = Stay.find_by_id([:stay_id])
   	@workOrder = @user.workOrder.create workOrder_params
   	if @workOrder_params
   		redirect_to user_work_orders_path(session[:user_id])

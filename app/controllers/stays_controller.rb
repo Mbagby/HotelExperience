@@ -2,9 +2,9 @@ class StaysController < ApplicationController
 
   def index
   	@user = User.find_by_id(params[:user_id])
-  	@stays = @user.stays.order('checkin')
+    @currentDate = Time.now.strftime("%m/%d/%Y %H:%M")
+  	@stays = @user.stays.order('checkout')
     @room = Room.find_by_id(params[:room_id])
-
   end	
 
   def new
@@ -25,6 +25,9 @@ class StaysController < ApplicationController
   end
 
   def show
+    @currentDate = Time.now.strftime("%m/%d/%Y %H:%M")
+    @stay = Stay.find_by_id(params[:id])
+    @user = User.find_by_id(session[:user_id])
   end
 
   def edit

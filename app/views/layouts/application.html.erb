@@ -10,6 +10,7 @@
 </head>
 
 
+
 <body>
 
 <div id= "sideMenu">
@@ -23,10 +24,11 @@
   </div>
   <div class="item" title="Order Room Service">
     <i class="cocktail icon"></i>
-    Room Service
+    <%= link_to "Room Service", user_path(session[:user_id]) %>
   </div>
    <div class="item" title="Submit A Maintance Request">
     <i class="warning sign icon"></i>
+
     Maintance
   </div>
    <div class="item" title="Set A Time For Housekeeping">

@@ -1,3 +1,28 @@
 <h1>Stay#show</h1>
 <p>Find me in app/views/stay/show.html.erb</p>
 
+		<div>
+				<h2> <%= @stay.title %> </h2>
+				<h2> <%= @stay.user_id %> </h2>
+			</div>
+			<div>
+				<span>Checkin: <%= @stay.checkin %></span>
+				<span>Checkin: <%= @stay.checkout %></span>
+			</div>
+			<div>
+				<%= @stay.hotel_id %>
+			</div> 	
+			<div>
+				<%= @currentDate%>
+			</div> 	
+
+			<% if @stay.checkin <= @currentDate && @stay.checkout >= @currentDate %>
+			<div>
+				<%= link_to '<div class="featureItem" title="Submit A Maintance Request"><i class="warning icon"></i></div>'.html_safe, new_user_stay_work_order_path(@user.id, @stay.id)%>
+			</div>
+			<%else%>
+			<div> <p>"Leave a comment about your stay!"</p></div>
+			<%end%>
+
+			
+		</div>

@@ -5,21 +5,43 @@
 <%= @user.id %>
 
 
+<div id="lastestStays">
 <% @stays.each do |stay| %>
- 	<div>
-		<h2> <%= stay.title %> </h2>
-		<h2> <%= stay.user_id %> </h2>
-	</div>
-	<div>
-		<span>Checkin: <%= stay.checkin %></span>
-		<span>Checkin: <%= stay.checkout %></span>
-	</div>
-	<div>
-		<%= stay.hotel_id %>
-	</div> 	
+		<div class ="stays">
+	 		<div>
+				<h2> <%= stay.title %> </h2>
+				<h2> <%= stay.user_id %> </h2>
+			</div>
+			<div>
+				<span>Checkin: <%= stay.checkin %></span>
+				<span>Checkin: <%= stay.checkout %></span>
+			</div>
+			<div>
+				<%= stay.hotel_id %>
+			</div> 	
+			<div>
+				<%= @currentDate%>
+			</div> 	
 
+			<% if stay.checkin <= @currentDate && stay.checkout >= @currentDate %>
+			<div class= "featureSelection">
+				<%= link_to '<div class="featureItem" title="Order Room Service"><i class="cocktail icon"></i></div>'.html_safe, user_stay_path(@user.id, stay.id)%>
+				<%= link_to '<div class="featureItem" title="Submit A Maintance Request"><i class="warning icon"></i></div>'.html_safe, user_stay_path(@user.id, stay.id)%>
+				<%= link_to '<div class="featureItem" title="Make A Spa Reservation"><i class="leaf icon"></i></div>'.html_safe, user_stay_path(@user.id, stay.id)%>
+				<%= link_to '<div class="featureItem" title="Make A Dining Reservation"><i class="food icon"></i></div>'.html_safe, user_stay_path(@user.id, stay.id)%>
+				<%= link_to '<div class="featureItem" title="Set A Time For Housekeeping"><i class="home icon"></i></div>'.html_safe, user_stay_path(@user.id, stay.id)%>
+				<%= link_to '<div class="featureItem" title="Place A Do Not Disturb Hold"><i class="key icon"></i></div>'.html_safe, user_stay_path(@user.id, stay.id)%>
+			</div>
+			<%else%>
+			<%end%>
 
-<% end %>
+			
+		</div>
+
+	<% end %>
+
+</div>
+
 
 
 
