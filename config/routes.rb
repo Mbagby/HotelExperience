@@ -17,6 +17,9 @@ end
 
 get "/", to: "sessions#login"
   #login
+  get '/users/:user_id/work_orders', to: "work_orders#index", as: "user_work_orders"
+  
+
   get 'login', to: "sessions#login", as: "login"
   post 'login', to: "sessions#attempt_login"
 

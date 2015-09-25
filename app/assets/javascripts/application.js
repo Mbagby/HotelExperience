@@ -33,8 +33,9 @@ $('.ui.basic.modal')
   .modal('show')
 ;
 $("#profileButton").click(function(){
-    $('.ui.modal').show();
+    $('.ui.modal').modal('show');
 })
+
 
 
    

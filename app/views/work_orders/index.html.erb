@@ -16,7 +16,7 @@
   <tbody>
 <% @workOrders.each do |workOrder|%>
     <tr>
-    	<td><img id= "workOrderImage" src = <%=workOrder.image_url%> style= "height: 100px"></td>
+        <td><%=image_tag workOrder.image.url(:thumb) %></td>
     	<td><%=workOrder.created_at%></td>
     	<td><%=workOrder.description%></td>
     	<td><%=workOrder.hotel_id%></td>

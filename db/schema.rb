@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150901193038) do
+ActiveRecord::Schema.define(version: 20150924205304) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -61,19 +61,39 @@ ActiveRecord::Schema.define(version: 20150901193038) do
     t.string   "email"
     t.string   "password"
     t.string   "password_digest"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
   create_table "work_orders", force: :cascade do |t|
     t.text     "description"
-    t.text     "image_url"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.integer  "hotel_id"
+    t.integer  "room_id"
+    t.integer  "stay_id"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.integer  "user_id"
   end
+
+  add_index "work_orders", ["hotel_id"], name: "index_work_orders_on_hotel_id", using: :btree
+  add_index "work_orders", ["room_id"], name: "index_work_orders_on_room_id", using: :btree
+  add_index "work_orders", ["stay_id"], name: "index_work_orders_on_stay_id", using: :btree
+  add_index "work_orders", ["user_id"], name: "index_work_orders_on_user_id", using: :btree
 
   add_foreign_key "rooms", "hotels"
   add_foreign_key "stays", "hotels"
   add_foreign_key "stays", "rooms"
   add_foreign_key "stays", "users"
+  add_foreign_key "work_orders", "hotels"
+  add_foreign_key "work_orders", "rooms"
+  add_foreign_key "work_orders", "stays"
+  add_foreign_key "work_orders", "users"
 end

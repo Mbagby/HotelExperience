@@ -1,5 +1,6 @@
 class StaysController < ApplicationController
 
+
   def index
   	@user = User.find_by_id(params[:user_id])
     @currentDate = Time.now.strftime("%m/%d/%Y %H:%M")
@@ -20,8 +21,10 @@ class StaysController < ApplicationController
   	if @stay
   		redirect_to user_stays_path(session[:user_id]), flash: {success: "Created!"}
     else
-    	redirect_to new_user_stay_path, flash: {error: @stay.errors.full_messages}
+    	redirect_to new_user_stay_work_order_path(@user.id, Stay.find(params[:stay_id])), flash: {error: @stay.errors.full_messages}
     end
+
+
   end
 
   def show

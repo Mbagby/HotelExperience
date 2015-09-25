@@ -19,6 +19,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'pry-rails'
 gem 'pry'
 
+gem "paperclip", "~> 4.3"
 gem 'nokogiri'
 gem 'sidekiq'
 gem 'typhoeus'

@@ -3,10 +3,6 @@ class UsersController < ApplicationController
   	before_action :ensure_correct_user, only: [:show,:edit, :update, :destroy]
   
   def index
-  	@user = User.find_by_id(params[:user_id])
-  	# @hotels = hotel.all
-  	# @rooms = room.all
-  	# @workOrders = work_order.all
   end
 
   def show
