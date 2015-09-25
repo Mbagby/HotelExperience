@@ -1,2 +1,27 @@
 <h1>Stay#edit</h1>
 <p>Find me in app/views/stay/edit.html.erb</p>
+
+
+<div id="stayForm" class="ui form">
+<%= form_for @stay, url: user_stay_path(@user, @stay) do |f| %>
+
+
+	<div id= "title">
+		<h4 class = "labels">Title Your Stay</h4>
+		<%= f.text_field :title %>
+	</div>
+
+	<div class="twoBlock" >
+		<h4 class= "labels">Hotel</h4>
+		<%= f.collection_select(:hotel_id, @hotels, :id, :name, {prompt: "	Hotel"}, {:class => 'ui dropdown'}) %>
+	</div>
+	
+	<div class="twoBlock">
+		<h4 class= "labels">Room</h4>
+		<%= f.collection_select(:room_id, @rooms, :id, :number, {prompt: "	Room Number"}, {:class => 'ui dropdown'}) %>
+	</div>
+	<div>
+	<%= f.submit "Save Changes", class: "btn btn-primary"%>
+	</div>
+<%end%>
+</div>

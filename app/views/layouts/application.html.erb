@@ -28,8 +28,7 @@
   </div>
    <div class="item" title="Submit A Maintance Request">
     <i class="warning sign icon"></i>
-
-    Maintance
+    <%= link_to "Maintance", user_work_orders_path(session[:user_id]) %>
   </div>
    <div class="item" title="Set A Time For Housekeeping">
     <i class="home icon"></i>

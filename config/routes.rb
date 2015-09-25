@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'reset/edit'
   get 'reset/new'
 
+
 resources :hotels do
       resources :rooms, shallow: true
 end

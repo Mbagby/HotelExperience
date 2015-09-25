@@ -139,8 +139,7 @@
 			}
 			.squareThree{
 				display: inline-block;
-				background-image: url("DivPic");
-				background-color: #E5E5E5;
+				background-color: #D9E2F6;
 				width: 32%;
 				height:100%;
 				vertical-align:top;
@@ -297,6 +296,28 @@
 	
 		}
 	}
+	#allStays{
+		width: 78%;
+		position: relative;
+	}
+	#titleStay a{
+		font-size: 20px;
+		color: black;
+	}
+	#titleStay{
+		text-align: center;
+		background-color: #D9E2F6;
+		min-height: 75px;
+	}
+	.staysShow{
+		width: 30%;
+		display: inline-block;
+		vertical-align: top;
+		border: 2px solid #E5E5E5;
+		border-radius: 5px;
+		margin: 1.5%;
+		position: relative;
+	}
 	#latestStays{
 		width: 78%;
 		position: relative;
@@ -310,6 +331,9 @@
 		border: 2px solid #E5E5E5;
 		border-radius: 5px;
 		position: relative;
+	}
+	.stays:hover{
+		background-color: #E5E5E5;
 	}
 	.featureSelection{
 		position: absolute;

@@ -11,12 +11,11 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @user= User.find_by_id(session[:user_id])
   end
 
   def update
     @user = User.find_by_id(session[:user_id])
-    @user.update_attribute(:image, user_params)
+    @user.update  user_params
     if @user.save
       redirect_to users_path(@user), flash: {success: "#{@user.username} updated!"}
     else

@@ -1,7 +1,7 @@
 <h1>Stay#show</h1>
 <p>Find me in app/views/stay/show.html.erb</p>
 
-		<div>
+			<div>
 				<h2> <%= @stay.title %> </h2>
 				<h2> <%= @stay.user_id %> </h2>
 			</div>
@@ -23,6 +23,9 @@
 			<%else%>
 			<div> <p>"Leave a comment about your stay!"</p></div>
 			<%end%>
-
+			<%if @stay.user_id == session[:user_id]  %>
+				<%= link_to "Delete This Stay?", user_stay_path(@user, @stay) , method: :delete, data: { confirm: 'Are you sure?' }%>
+				<%= link_to "Edit This Stay?", edit_user_stay_path(@user, @stay)%>
+			<%end  %>
 			
 		</div>

@@ -1,2 +1,35 @@
 <h1>WorkOrder#edit</h1>
 <p>Find me in app/views/work_order/edit.html.erb</p>
+
+<%= form_for @workOrder, url: user_stay_work_orders_path(@user, @stay) do |f| %>
+
+	<div>
+	<%= f.file_field :image %>
+	</div>
+
+	<div class="twoBlock" >
+		<h4 class= "labels">Hotel</h4>
+		<%= f.collection_select(:hotel_id, @hotels, :id, :name, {prompt: "	Hotel"}, {:class => 'ui dropdown'}) %>
+	</div>
+	
+	<div class="twoBlock">
+		<h4 class= "labels">Room</h4>
+		<%= f.collection_select(:room_id, @rooms, :id, :number, {prompt: "	Room Number"}, {:class => 'ui dropdown'}) %>
+	</div>
+
+	<div id= "workOrderDescription">
+		<h4 class = "labels">Describe The Issue</h4>
+		<%= f.text_area :description %>
+	</div>
+
+
+
+
+
+
+
+<div id="submitStay">
+  <%= f.submit "Submit Your Maintance Request" %>
+</div>
+
+<% end %>
