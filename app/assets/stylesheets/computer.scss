@@ -4,6 +4,7 @@
 
 
 @media screen and (min-width: 769px) and (max-width: 1680px){
+/*Login Signup Pages*/
 	.pictureBackground{
 		background-image: url("Mountain");
 		background-repeat:no-repeat;
@@ -74,194 +75,206 @@
 			}
 		}	
 	}
-	#topMenu{
-		width: 79%;
-    	font-size: 19px;
-     #search{
-    	font-size: 13px;
-    }
-    a{
-    	color: black;
-    }
-	}
+/*Login Signup Pages End*/
+
+/*Layout Page*/
 	.mainBody{
 		margin-left: 240px;
 		width:100%;
 		display: inline-block;
 		padding-top: 1%;
-		.rowOne{
+		#topMenu{
 			width: 79%;
-			height:275px;
-			margin-top: 1%;
-			margin-bottom: 1%;
-			background-color: #E5E5E5;
-			border-radius: 3px;
+	    	font-size: 19px;
+	     	#search{
+	    		font-size: 13px;
+	    	}
+	    	a{
+	    		color: black;
+	    	}
 		}
-		.rowTwo{
-			width: 79%;
-			height: 250px;
-			display:inline-block;
-			margin-bottom: 1%;
-			border-radius: 3px;
-			div{
-				border-radius: 3px;
-			}
-			.squareOne{
-				display: inline-block;
-				background-color: #D9E2F6;
-				width: 32%;
-				height:100%;
-				margin-right: 2%;
-				background-image: url("DND.jpg");
-				background-repeat:no-repeat;
-				background-size: cover;
-				vertical-align:top;
-				p{
-					font-size: 20px;
-					padding-right: 5px;
-					margin-top: 220px;
-					text-align: right;
-					color: #5464C0;
-					opacity: .8;
-		
-				}
-			}
-			.squareTwo{
-				display: inline-block;
-				background-color: #E5E5E5;
-				width:31%;
-				height:100%;
-				margin-right: 2%;
-				background-image: url("Housekeeper.jpg");
-				background-repeat:no-repeat;
-				background-size: cover;
-				vertical-align:top;
-			}
-			.squareThree{
-				display: inline-block;
-				background-color: #D9E2F6;
-				width: 32%;
-				height:100%;
-				vertical-align:top;
-				p{
-					padding: 5px;
-				}
-			}
+	}
+	#sideMenu{
+		#logo{
+			background-image: url("PlainLogo");
+			background-size: cover;
+			height: 80px;
+			width: 17rem;
 		}
-		.rowThree{
-			width: 79%;
-			height: 250px;
-			display:inline-block;
-			border-radius: 3px;
-			margin-bottom: 1%;
-			div{
-				border-radius: 3px;
-			}
-			.rectangleOne{
-				display: inline-block;
-				width: 41%;
-				margin-right: 2%;
-				background-color: #E5E5E5;
-				height: 100%;
-				vertical-align:top;
-				p{
-					padding: 5px;
-				}
-			}
-			.rectangleTwo{
-				display: inline-block;
-				width: 56%;
-				background-color: #D9E2F6;
-				height: 100%;
-				background-image: url("RoomServiceBlur.jpg");
-				background-repeat:no-repeat;
-				background-size: cover;
-				height:100%;
-				vertical-align:top;
-				p{
-					font-size: 30px;
-					padding-left: 4px;
-					color: #5464C0;
-					opacity: .6;
-					font-weight: bold;
-				}
-			}
-		}
-		.rowFour{
-			width: 79%;
-			height: 250px;
-			display:inline-block;
-			border-radius: 3px;
-			margin-bottom: 1%;
-			div{
-				border-radius: 3px;
-			} 
-			.rowFourOne{
-				display: inline-block;
-				width: 51%;
-				margin-right: 2%;
-				background-color: #E5E5E5;
-				background-image: url("Spa2");
-				background-repeat:no-repeat;
-				background-size: cover;
-				height: 100%;
-				vertical-align:top;
-			}
-			.rowFourTwo{
-				display: inline-block;
-				text-align: bottom;
-				width: 22%;
-				margin-right: 2%;
-				background-color: #E5E5E5;
-				height: 100%;
-				vertical-align:top;
-				h3{
-					padding: 5px;
-				}
-			}
-			.rowFourThree{
-				display: inline-block;
-				width: 22%;
-				background-color: #E5E5E5;
-				background-image: url("Restraurant");
-				background-repeat:no-repeat;
-				background-size: cover;
-				height: 100%;
-				vertical-align:top;
-			}
-		}
-		.rowFive{
-			width: 79%; 
-			height:455px;
-			margin-top: 1%;
-			margin-bottom: 2%;
-			background-color: #E5E5E5;
-			background-image: url("desk");
+		#menu{
+			background-image: url("Mountain.jpg");
 			background-repeat:no-repeat;
 			background-size: cover;
+			height:100%;
+			width: 17rem;
+		}
+	}	
+/*Layout Page End*/
+		
+
+		
+/*User Index	*/	
+	.rowOne{
+		width: 79%;
+		height:275px;
+		margin-top: 1%;
+		margin-bottom: 1%;
+		background-color: #E5E5E5;
+		border-radius: 3px;
+	}
+	.rowTwo{
+		width: 79%;
+		height: 250px;
+		display:inline-block;
+		margin-bottom: 1%;
+		border-radius: 3px;
+		div{
 			border-radius: 3px;
 		}
+		.squareOne{
+			display: inline-block;
+			background-color: #D9E2F6;
+			width: 32%;
+			height:100%;
+			margin-right: 2%;
+			background-image: url("DND.jpg");
+			background-repeat:no-repeat;
+			background-size: cover;
+			vertical-align:top;
+			p{
+				font-size: 20px;
+				padding-right: 5px;
+				margin-top: 220px;
+				text-align: right;
+				color: #5464C0;
+				opacity: .8;
+	
+			}
+		}
+		.squareTwo{
+			display: inline-block;
+			background-color: #E5E5E5;
+			width:31%;
+			height:100%;
+			margin-right: 2%;
+			background-image: url("Housekeeper.jpg");
+			background-repeat:no-repeat;
+			background-size: cover;
+			vertical-align:top;
+		}
+		.squareThree{
+			display: inline-block;
+			background-color: #D9E2F6;
+			width: 32%;
+			height:100%;
+			vertical-align:top;
+			p{
+				padding: 5px;
+			}
+		}
 	}
-	#logo{
-		background-image: url("PlainLogo");
-		background-size: cover;
-		height: 80px;
-		width: 17rem;
+	.rowThree{
+		width: 79%;
+		height: 250px;
+		display:inline-block;
+		border-radius: 3px;
+		margin-bottom: 1%;
+		div{
+			border-radius: 3px;
+		}
+		.rectangleOne{
+			display: inline-block;
+			width: 41%;
+			margin-right: 2%;
+			background-color: #E5E5E5;
+			height: 100%;
+			vertical-align:top;
+			p{
+				padding: 5px;
+			}
+		}
+		.rectangleTwo{
+			display: inline-block;
+			width: 56%;
+			background-color: #D9E2F6;
+			height: 100%;
+			background-image: url("RoomServiceBlur.jpg");
+			background-repeat:no-repeat;
+			background-size: cover;
+			height:100%;
+			vertical-align:top;
+			p{
+				font-size: 30px;
+				padding-left: 4px;
+				color: #5464C0;
+				opacity: .6;
+				font-weight: bold;
+			}
+		}
 	}
-	#menu{
-		background-image: url("Mountain.jpg");
+	.rowFour{
+		width: 79%;
+		height: 250px;
+		display:inline-block;
+		border-radius: 3px;
+		margin-bottom: 1%;
+		div{
+			border-radius: 3px;
+		} 
+		.rowFourOne{
+			display: inline-block;
+			width: 51%;
+			margin-right: 2%;
+			background-color: #E5E5E5;
+			background-image: url("Spa2");
+			background-repeat:no-repeat;
+			background-size: cover;
+			height: 100%;
+			vertical-align:top;
+		}
+		.rowFourTwo{
+			display: inline-block;
+			text-align: bottom;
+			width: 22%;
+			margin-right: 2%;
+			background-color: #E5E5E5;
+			height: 100%;
+			vertical-align:top;
+			h3{
+				padding: 5px;
+			}
+		}
+		.rowFourThree{
+			display: inline-block;
+			width: 22%;
+			background-color: #E5E5E5;
+			background-image: url("Restraurant");
+			background-repeat:no-repeat;
+			background-size: cover;
+			height: 100%;
+			vertical-align:top;
+		}
+	}
+	.rowFive{
+		width: 79%; 
+		height:455px;
+		margin-top: 1%;
+		margin-bottom: 2%;
+		background-color: #E5E5E5;
+		background-image: url("desk");
 		background-repeat:no-repeat;
 		background-size: cover;
-		height:100%;
-		width: 17rem;
+		border-radius: 3px;
 	}
-	.sidebar{
-		position:fixed;
-	}
+	
+/*User Index End*/	
 
-	#dividerTop{
-		width:79%;
-	}
+
+
+
+
+
+/*User Show*/
 	#profileInfo{
 		position: relative;
 		width: 79%;
@@ -269,13 +282,6 @@
 		margin-top: 10px;
 		border-radius: 5px;
 		text-align: top;
-		#basicProfileInfo{
-			display: inline-block;
-			text-align: right;
-			float: right;
-			margin-right: 20px;
-	
-		}
 		#profileImage{
 			img{
 				width: 250px;
@@ -291,75 +297,34 @@
 				height: 35px;
 			}	
 		}
-		#profileImage{
+		#basicProfileInfo{
 			display: inline-block;
+			text-align: right;
+			float: right;
+			margin-right: 20px;
 	
 		}
-	}
-	#allStays{
-		width: 78%;
-		position: relative;
-	}
-	#titleStay a{
-		font-size: 20px;
-		color: black;
-	}
-	#titleStay{
-		text-align: center;
-		display: inline-block;
-		background-color: #D9E2F6;
-		width: 100%;
-		min-height: 75px;
-	}
-	.staysShow{
-		width: 30%;
-		display: inline-block;
-		vertical-align: top;
-		border: 2px solid #E5E5E5;
-		border-radius: 5px;
-		margin: 1.5%;
-		position: relative;
-		height: 220px;
-	}
-	#latestStays{
-		width: 78%;
-		position: relative;
-	}
-	.stays{
-		display: inline-block;
-		vertical-align: top;
-		margin: 1.5%;
-		width: 30%;
-		height: 230px;
-		border: 2px solid #E5E5E5;
-		border-radius: 5px;
-		position: relative;
-	}
-	.stays:hover{
-		background-color: #E5E5E5;
-	}
-	.featureSelection{
-		position: absolute;
-		bottom: 2px;
-
-	}
-	.featureItem{
-		margin: 2px;
-		display: inline-block;
-		background-color: #D9E2F6;
-		border-radius: 2px;
-	}
-	#formBox{
-		width: 79%;
-		border: 2px solid #E5E5E5;
-		margin-top: 10px;
-		border-radius: 5px;
-		text-align: top;
-		#stayForm{
-			margin: 2%;
+		#latestStays{
+			width: 78%;
+			position: relative;
+			.stays{
+				display: inline-block;
+				vertical-align: top;
+				margin: 1.5%;
+				width: 30%;
+				height: 230px;
+				border: 2px solid #E5E5E5;
+				border-radius: 5px;
+				position: relative;
+			}
+			.stays:hover{
+				background-color: #E5E5E5;
+			}
 		}
 	}
+/*User Show End*/
 
+/*Stays Index*/
 	#infoLabel{
 		height: 200px;
 		width: 78%;
@@ -381,7 +346,6 @@
 			display: block;
 			margin: auto;
 			text-align: center;
-
 			a{
 				color: #191970;
 				font-family: 'Open Sans', sans-serif;
@@ -389,6 +353,62 @@
 			}
 		}
 	}
+	#allStays{
+		width: 78%;
+		position: relative;
+		.staysShow{
+			width: 30%;
+			display: inline-block;
+			vertical-align: top;
+			border: 2px solid #E5E5E5;
+			border-radius: 5px;
+			margin: 1.5%;
+			position: relative;
+			height: 220px;
+			#hotelStayPic{
+
+			}
+			#titleStay{
+				text-align: center;
+				display: inline-block;
+				background-color: #D9E2F6;
+				width: 100%;
+				min-height: 75px;
+				a{
+					font-size: 20px;
+					color: black;
+				}
+			}
+		}
+		.featureSelection{
+			position: absolute;
+			bottom: 2px;
+			.featureItem{
+				margin: 2px;
+				display: inline-block;
+				background-color: #D9E2F6;
+				border-radius: 2px;
+			}
+		}
+	}
+/*Stays Index End*/
+
+
+
+	#formBox{
+		width: 79%;
+		border: 2px solid #E5E5E5;
+		margin-top: 10px;
+		border-radius: 5px;
+		text-align: top;
+		#stayForm{
+			margin: 2%;
+		}
+	}
+
+	
+
+
 	
 }
 
