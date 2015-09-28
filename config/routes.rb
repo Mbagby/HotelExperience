@@ -9,6 +9,8 @@ resources :hotels do
 end
 resources :users do
     resources :stays do
+      put :dndOn, :on => :collection
+      put :dndOn, :on => :collection
       resources :work_orders, shallow: true
     end
 end

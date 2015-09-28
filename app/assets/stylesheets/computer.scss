@@ -306,7 +306,9 @@
 	}
 	#titleStay{
 		text-align: center;
+		display: inline-block;
 		background-color: #D9E2F6;
+		width: 100%;
 		min-height: 75px;
 	}
 	.staysShow{
@@ -317,6 +319,7 @@
 		border-radius: 5px;
 		margin: 1.5%;
 		position: relative;
+		height: 220px;
 	}
 	#latestStays{
 		width: 78%;
@@ -327,7 +330,7 @@
 		vertical-align: top;
 		margin: 1.5%;
 		width: 30%;
-		height: 200px;
+		height: 230px;
 		border: 2px solid #E5E5E5;
 		border-radius: 5px;
 		position: relative;
@@ -346,7 +349,47 @@
 		background-color: #D9E2F6;
 		border-radius: 2px;
 	}
-		
+	#formBox{
+		width: 79%;
+		border: 2px solid #E5E5E5;
+		margin-top: 10px;
+		border-radius: 5px;
+		text-align: top;
+		#stayForm{
+			margin: 2%;
+		}
+	}
+
+	#infoLabel{
+		height: 200px;
+		width: 78%;
+		background-color: black;
+		color: white;
+		font-size: 22px;
+		margin-bottom: 10px;
+		font-family: 'Open Sans', sans-serif;
+		#infoText{
+			display: block;
+			text-align: center;
+			padding-top: 30px;
+
+		}
+		#newStayButton{
+			background-color: white;
+			border-radius: 5px;
+			width: 110px;
+			display: block;
+			margin: auto;
+			text-align: center;
+
+			a{
+				color: #191970;
+				font-family: 'Open Sans', sans-serif;
+
+			}
+		}
+	}
+	
 }
 
 

@@ -18,7 +18,7 @@ class StaysController < ApplicationController
 
   def create
     @user = User.find_by_id(session[:user_id])
-  	@stay = @user.stays.create(stay_params)
+  	@stay = @user.stays.create stay_params 
   	if @stay
   		redirect_to user_stays_path(session[:user_id]), flash: {success: "Created!"}
     else
@@ -30,6 +30,14 @@ class StaysController < ApplicationController
     @currentDate = Time.now.strftime("%m/%d/%Y %H:%M")
     @stay = Stay.find_by_id(params[:id])
     @user = User.find_by_id(session[:user_id])
+    @hotels = Hotel.all
+    def dndOn
+      @stay.do_not_disturb = true
+    end
+
+    def dndOff
+    @stay.do_not_disturb = false
+    end
   end
 
   def edit
@@ -44,7 +52,7 @@ class StaysController < ApplicationController
     @user = User.find_by_id(session[:user_id])
     @stay.update stay_params
     if @stay.save
-      redirect_to user_stays_path(session[:user_id])
+      redirect_to user_stay_path(session[:user_id], params[:id])
     else
       render :edit
     end
@@ -57,6 +65,7 @@ class StaysController < ApplicationController
 
   end
 
+
 private
 
   def stay_params
@@ -66,7 +75,8 @@ private
   		:checkout,
   		:hotel_id,
   		:room_id,
-  		:user_id
+  		:user_id,
+      :do_not_disturb
   		)
   end
 

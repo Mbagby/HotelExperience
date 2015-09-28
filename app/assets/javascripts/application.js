@@ -26,6 +26,9 @@
 
 $(window).load(function() {
 
+
+
+
 $('.ui.dropdown')
   .dropdown()
 ;
@@ -36,9 +39,6 @@ $("#profileButton").click(function(){
     $('.ui.modal').modal('show');
 })
 
-
-
-   
 
 $(function () {
         $('#datetimepicker6').datetimepicker({useCurrent: true});

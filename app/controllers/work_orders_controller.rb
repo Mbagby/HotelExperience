@@ -19,6 +19,8 @@ class WorkOrdersController < ApplicationController
   	@stay = Stay.find(params[:stay_id])
   	@workOrder = @user.work_orders.create workOrder_params
     @workOrder.stay_id = @stay.id
+
+    
   	if @workOrder.save
   		redirect_to user_work_orders_path(session[:user_id])
  	  else

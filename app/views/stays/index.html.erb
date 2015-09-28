@@ -1,39 +1,42 @@
 
+<div id ="infoLabel">
+	<p id="infoText">Select or add a stay in order to use the feautures</p>
+	<div id = "newStayButton"><%= link_to "New Stay", new_user_stay_path(@user.id) %></div>
+</div>
 
-<h1>Stay#index</h1>
-<p>Find me in app/views/stay/index.html.erb</p>
 
-
-<div><%= link_to "New Stay", new_user_stay_path(@user.id) %></div>
 
 <div id="allStays">
 
+<div class="ui segment">
+  <h2 class="ui right floated header">Current Adventure</h2>
+  <div class="ui clearing divider"></div>
 <div class= "currentStays">
 <% @stays.each do |stay| %>
 		
 		<% if stay.checkin <= @currentDate && stay.checkout >= @currentDate %>
 		<div class ="staysShow">
 
-	 		<div id= "titleStay">
-				<%= link_to stay.title, user_stay_path(@user.id, stay.id)%>
-				<h2> <%= stay.user_id %> </h2>
-			</div>
-
-			<div id="checkInOutStay">
-				<span>Checkin: <%= stay.checkin%></span>
-				<span>Checkin: <%= stay.checkout %></span>
-			</div>
-
-			<div id="hotelIdStay">
-				Hotel Id: <%= stay.hotel_id %>
+			<div id= "titleStay">
+			<div id="hotelStay">
 				<div id="hotelStayPic">
 					<img src = "<%= @hotels.find_by_id(stay.hotel_id).image_url%>" style="width:100px" ></img>
 				</div>
 			</div> 	
+				<%= link_to stay.title, user_stay_path(@user.id, stay.id)%>
+			</div>
+			<div id="hotelStayName">
+				<%= @hotels.find_by_id(stay.hotel_id).name%>
+			</div>
+			<div id="checkInOutStay">
+				<p>Check-in: <%= stay.checkin%></p>
+			</div>
+			<div id="checkInOutStay">
+				<p>Check-out: <%= stay.checkout%></p>
+			</div>
 
-			<div id="currentDateStay">
-				Current Date: <%= @currentDate%>
-			</div> 	
+
+		 	
 
 			<div class= "featureSelection">
 				<%= link_to '<div class="featureItem" title="Order Room Service"><i class="cocktail icon"></i></div>'.html_safe, user_stay_path(@user.id, stay.id)%>
@@ -48,71 +51,77 @@
 	<% end %>
 <% end %>
 </div>
+</div>
 
+<div class="ui segment">
+  <h2 class="ui right floated header">Future Adventures</h2>
+  <div class="ui clearing divider"></div>
 <div class= "futureStays">
 <% @stays.each do |stay| %>
 		
-		<% if stay.checkin <= @currentDate %>
-		<div class ="staysShow">
+		<% if stay.checkout <= @currentDate %>
+				<div class ="staysShow">
 
-	 		<div id= "titleStay">
-				<%= link_to stay.title, user_stay_path(@user.id, stay.id)%>
-				<h2> <%= stay.user_id %> </h2>
-			</div>
-
-			<div id="checkInOutStay">
-				<span>Checkin: <%= stay.checkin%></span>
-				<span>Checkin: <%= stay.checkout %></span>
-			</div>
-
-			<div id="hotelIdStay">
-				Hotel Id: <%= stay.hotel_id %>
+			<div id= "titleStay">
+			<div id="hotelStay">
 				<div id="hotelStayPic">
 					<img src = "<%= @hotels.find_by_id(stay.hotel_id).image_url%>" style="width:100px" ></img>
 				</div>
 			</div> 	
+				<%= link_to stay.title, user_stay_path(@user.id, stay.id)%>
+			</div>
+			<div id="hotelStayName">
+				<%= @hotels.find_by_id(stay.hotel_id).name%>
+			</div>
+			<div id="checkInOutStay">
+				<p>Check-in: <%= stay.checkin%></p>
+			</div>
+			<div id="checkInOutStay">
+				<p>Check-out: <%= stay.checkout%></p>
+			</div>
 
-			<div id="currentDateStay">
-				Current Date: <%= @currentDate%>
-			</div> 	
+		 	
 
 		</div>
 	<%else%>
 	<% end %>
 <% end %>
 </div>
+</div>
 
+<div class="ui segment">
+  <h2 class="ui right floated header">Past Adventures</h2>
+  <div class="ui clearing divider"></div>
 <div class= "pastStays">
 <% @stays.each do |stay| %>
 		
-		<% if stay.checkout <= @currentDate %>
+		<% if stay.checkin >= @currentDate %>
 		<div class ="staysShow">
 
-	 		<div id= "titleStay">
-				<%= link_to stay.title, user_stay_path(@user.id, stay.id)%>
-				<h2> <%= stay.user_id %> </h2>
-			</div>
-
-			<div id="checkInOutStay">
-				<span>Checkin: <%= stay.checkin%></span>
-				<span>Checkin: <%= stay.checkout %></span>
-			</div>
-
-			<div id="hotelIdStay">
-				Hotel Id: <%= stay.hotel_id %>
+			<div id= "titleStay">
+			<div id="hotelStay">
 				<div id="hotelStayPic">
 					<img src = "<%= @hotels.find_by_id(stay.hotel_id).image_url%>" style="width:100px" ></img>
 				</div>
 			</div> 	
-
-			<div id="currentDateStay">
-				Current Date: <%= @currentDate%>
-			</div> 	
+				<%= link_to stay.title, user_stay_path(@user.id, stay.id)%>
+			</div>
+			<div id="hotelStayName">
+				<%= @hotels.find_by_id(stay.hotel_id).name%>
+			</div>	
+			<div id="checkInOutStay">
+				<p>Check-in: <%= stay.checkin%></p>
+			</div>
+			<div id="checkInOutStay">
+				<p>Check-out: <%= stay.checkout%></p>
+			</div>
+		 	
 
 		</div>
 	<%else%>
 	<% end %>
 <% end %>
+</div>
 </div>
 
 </div>

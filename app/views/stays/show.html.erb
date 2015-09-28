@@ -26,6 +26,17 @@
 			<%if @stay.user_id == session[:user_id]  %>
 				<%= link_to "Delete This Stay?", user_stay_path(@user, @stay) , method: :delete, data: { confirm: 'Are you sure?' }%>
 				<%= link_to "Edit This Stay?", edit_user_stay_path(@user, @stay)%>
-			<%end  %>
-			
+			<%end %>
+
+
+
+<%= button_to "Dnd On", action: "dndOn", :method => :put %>
+
+
+<%= button_to "Dnd On", action: "dndOn", :method => :put %>
+
+
+
+
+		
 		</div>
