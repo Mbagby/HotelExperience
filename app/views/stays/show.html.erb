@@ -1,37 +1,58 @@
-<h1>Stay#show</h1>
-<p>Find me in app/views/stay/show.html.erb</p>
 
-			<div>
+<div id ="formBox">
+
+<div class="ui segment">
+    <h2 class="ui right floated header"><%= @stay.title %></h2>
+    <div class="ui clearing divider"></div>
+
+
+
+ 		<div id="stayShowInfo">
+
+
+ 			<div>
 				<h2> <%= @stay.title %> </h2>
-				<h2> <%= @stay.user_id %> </h2>
 			</div>
+
+			<div id="stayShowHotelName">
+ 				<%= @hotels.find_by_id(@stay.hotel_id).name %>
+ 			</div>
+
+ 			<div id ="stayShowImg">
+ 				<img src = "<%= @hotels.find_by_id(@stay.hotel_id).image_url%>"></img>
+ 			</div>
+
+ 			<div id="stayShowHotelAddress">
+ 				Address: <%= @hotels.find_by_id(@stay.hotel_id).address %>
+ 			</div>
+
+ 			<div id="stayShowRoomNumber">
+ 				Room Number: <%= @rooms.find_by_id(@stay.room_id).number %>
+ 			</div>
+		
 			<div>
 				<span>Checkin: <%= @stay.checkin %></span>
+			</div>
+			<div>
 				<span>Checkin: <%= @stay.checkout %></span>
-			</div>
-			<div>
-				<%= @stay.hotel_id %>
 			</div> 	
-			<div>
-				<%= @currentDate%>
-			</div> 	
-
-			<% if @stay.checkin <= @currentDate && @stay.checkout >= @currentDate %>
-			<div>
-				<%= link_to '<div class="featureItem" title="Submit A Maintance Request"><i class="warning icon"></i></div>'.html_safe, new_user_stay_work_order_path(@user.id, @stay.id)%>
-			</div>
-			<%else%>
-			<div> <p>"Leave a comment about your stay!"</p></div>
-			<%end%>
-			<%if @stay.user_id == session[:user_id]  %>
-				<%= link_to "Delete This Stay?", user_stay_path(@user, @stay) , method: :delete, data: { confirm: 'Are you sure?' }%>
-				<%= link_to "Edit This Stay?", edit_user_stay_path(@user, @stay)%>
-			<%end %>
-
-
-
-
-
+		</div>
 
 		
+
+		<div id="stayShowFeatures">
+			<% if @stay.checkin <= @currentDate && @stay.checkout >= @currentDate %>
+					<%= link_to '<div class="featureItem" title="Submit A Maintance Request"><i class="warning sign icon"></i>Maintance Request</div>'.html_safe, new_user_stay_work_order_path(@user.id, @stay.id)%>
+			<%else%>
+				<div class="featureItem"><i class="comments outline icon"></i></br>Leave A Comment</div>
+			<%end%>
+
+			<%if @stay.user_id == session[:user_id]  %>
+				<%= link_to '<div class="editDeleteLink"><i class="remove icon"></i></br>Delete Your Stay</div>'.html_safe, user_stay_path(@user, @stay) , method: :delete, data: { confirm: 'Are you sure?' }%>
+				<%= link_to '<div class="editDeleteLink"><i class="write icon"></i></br>Edit Your Stay</div>'.html_safe, edit_user_stay_path(@user, @stay)%>
+			<%end %>
 		</div>
+
+</div>
+
+</div>

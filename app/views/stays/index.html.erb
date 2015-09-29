@@ -21,11 +21,13 @@
 
 
 			
-			<div id="hotelStayPic">
-				<img src = "<%= @hotels.find_by_id(stay.hotel_id).image_url%>" style="width:100px" ></img>
-			</div>
-
+	
 			<div id= "titleStay">
+			<div id="hotelStay">
+				<div id="hotelStayPic">
+					<img src = "<%= @hotels.find_by_id(stay.hotel_id).image_url%>" style="width:100px" ></img>
+				</div>
+			</div> 	
 				<%= link_to stay.title, user_stay_path(@user.id, stay.id)%>
 			</div>
 

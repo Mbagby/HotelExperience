@@ -394,22 +394,88 @@
 /*Stays Index End*/
 
 
-
+/*Stays New Edit Show*/
 	#formBox{
 		width: 79%;
 		border: 2px solid #E5E5E5;
 		margin-top: 10px;
 		border-radius: 5px;
 		text-align: top;
+		/*Stay New Edit*/
 		#stayForm{
 			margin: 2%;
+			#title{
+			}
+			.labels{
+			}
+			.twoBlock{
+			}
+			#submitStay{
+			}
+		}
+		/*Stay Show*/
+		#stayShowInfo{
+			display: inline-block;
+			width: 67%;
+			img{
+				width: 250px;
+				border-radius: 5px;
+			}
+			#stayShowHotelName{
+				font-size: 25px;
+			}
+			h2{
+				font-size: 40px;
+			}
+			span{
+
+			}
+		}
+		#stayShowFeatures{
+			width: 32%;
+			display: inline-block;
+			text-align: center;
+			vertical-align:top;
+			float: right;
+			padding-bottom: 5px;
+			font-size: 15px;
+			.featureItem{
+				display: inline-block;
+				width: 73px;
+				height: 73px;
+				border-radius: 5px;
+				background-color: #E5E5E5;
+				margin: 2px;
+				float: right;
+			}
+			.editDeleteLink{
+				float: right;
+				display: inline-block;
+				background-color: #E5E5E5;
+				border-radius: 5px;
+				height: 73px;
+				width: 73px;
+				margin: 2px;
+			}
+		}
+	}
+/*Stays New Edit Show End*/	
+
+/*WorkOrders New*/
+	#workOrderForm{
+		margin: 1%;
+		#work_order_image{
+			font-size: 15px;
+			text-align: center;
+		}
+		#submitStay{
+			font-size: 15px;
+			margin-top: 5px;
 		}
 	}
 
-	
 
 
-	
 }
 
 

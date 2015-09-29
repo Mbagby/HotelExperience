@@ -19,6 +19,8 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'pry-rails'
 gem 'pry'
 
+
+gem 'jquery-datatables-rails', '~> 3.3.0'
 gem "paperclip", "~> 4.3"
 gem 'nokogiri'
 gem 'sidekiq'

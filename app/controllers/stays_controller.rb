@@ -5,7 +5,7 @@ class StaysController < ApplicationController
   	@user = User.find_by_id(params[:user_id])
     @currentDate = Time.now.strftime("%m/%d/%Y %H:%M")
   	@stays = @user.stays.order('checkin')
-    @room = Room.find_by_id(params[:room_id])
+    @rooms = Room.all
     @hotels = Hotel.all
   end	
 
@@ -31,6 +31,7 @@ class StaysController < ApplicationController
     @stay = Stay.find_by_id(params[:id])
     @user = User.find_by_id(session[:user_id])
     @hotels = Hotel.all
+    @rooms = Room.all
     def dndOn
       @stay.do_not_disturb = true
     end
