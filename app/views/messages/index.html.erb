@@ -1,17 +1,15 @@
 <h1>Messages#index</h1>
 
 <h1>Chat</h1>
-
+<div id="chatDiv" style="overflow-y:scroll;">
 <ul id="chat">
-
-<% @messages.each do |message| %>
-  <%= message.content %>
- <%end%>
+<%= render @messages %>
 </ul>
+</div>
 
 <%= form_for Message.new, url: user_messages_path(@user.id), remote: true do |f| %>
   <%= f.text_field :content %>
-  <%= f.submit "Send" %>
+  <%= f.submit "Send", :id =>  "message_button" %>
 <% end %>
 
-<%= subscribe_to user_messages_path(@user.id) %>
+<%= subscribe_to user_messages_path(@user) %>

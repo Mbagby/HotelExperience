@@ -1,4 +1,6 @@
-<% publish_to user_messages_path(@user.id) do %>
-  $("#chat").append("<%= j render(@message) %>");
+
+<% publish_to user_messages_path(@user) do %>
+  $("#chat").prepend("<%= j render(partial: @message) %>");
+  $("#new_message")[0].reset();
 <% end %>
-$("#new_message")[0].reset();
+publish_to user_messages_path(@user)
