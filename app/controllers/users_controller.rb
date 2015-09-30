@@ -15,12 +15,10 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find_by_id(session[:user_id])
-    @user.update  user_params
-    if @user.save
-      redirect_to users_path(@user), flash: {success: "#{@user.username} updated!"}
-    else
-      render :edit
-    end
+    @user.image = params[:user][:image]
+    @user.update_attribute(:image, @user.image)
+    redirect_to users_path(@user)
+
   end
 
   def destroy

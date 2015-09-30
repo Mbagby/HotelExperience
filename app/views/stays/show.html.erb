@@ -41,8 +41,27 @@
 		
 
 		<div id="stayShowFeatures">
-			<% if @stay.checkin <= @currentDate && @stay.checkout >= @currentDate %>
-					<%= link_to '<div class="featureItem" title="Submit A Maintance Request"><i class="warning sign icon"></i>Maintance Request</div>'.html_safe, new_user_stay_work_order_path(@user.id, @stay.id)%>
+			
+		
+
+<%= form_for @stay, url: user_stay_path(@user, @stay.id) do |f|  %>
+
+<% if @stay.do_not_disturb == false %>
+<div id="dndButton">
+<%= f.hidden_field :do_not_disturb, :value => true %>
+<i class="alarm icon"></i></br><%= f.submit "Turn On&#x00A;DND".html_safe, id: "dnd"%>
+</div>
+<% else %>
+<div id="dndButton">
+<%= f.hidden_field :do_not_disturb, :value => false %>
+<i class="alarm slash icon"></i></br><%= f.submit "Turn Off&#x00A;DND".html_safe, id: "dnd"%>
+</div>
+<%end %>
+
+<%end%>
+
+		<% if @stay.checkin <= @currentDate && @stay.checkout >= @currentDate %>
+					<%= link_to '<div class="featureItem" title="Submit A Maintance Request"><i class="travel icon"></i>Maintance Request</div>'.html_safe, new_user_stay_work_order_path(@user.id, @stay.id)%>
 			<%else%>
 				<div class="featureItem"><i class="comments outline icon"></i></br>Leave A Comment</div>
 			<%end%>

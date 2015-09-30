@@ -32,13 +32,6 @@ class StaysController < ApplicationController
     @user = User.find_by_id(session[:user_id])
     @hotels = Hotel.all
     @rooms = Room.all
-    def dndOn
-      @stay.do_not_disturb = true
-    end
-
-    def dndOff
-    @stay.do_not_disturb = false
-    end
   end
 
   def edit
@@ -51,12 +44,16 @@ class StaysController < ApplicationController
   def update
     @stay = Stay.find_by_id(params[:id])
     @user = User.find_by_id(session[:user_id])
+    @stay.do_not_disturb = params[:stay]
+    @stay.update_attribute(:do_not_disturb, @stay.do_not_disturb)
+
     @stay.update stay_params
     if @stay.save
       redirect_to user_stay_path(session[:user_id], params[:id])
     else
       render :edit
     end
+
   end
 
   def destroy
@@ -65,6 +62,8 @@ class StaysController < ApplicationController
         redirect_to user_stays_path(session[:user_id]), alert: "Stay destroyed!"
 
   end
+
+
 
 
 private
@@ -82,3 +81,4 @@ private
   end
 
 end
+

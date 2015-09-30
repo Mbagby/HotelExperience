@@ -283,6 +283,7 @@
 		border-radius: 5px;
 		text-align: top;
 		#profileImage{
+			display: inline-block;
 			img{
 				width: 250px;
 				border-radius: 5px;
@@ -300,6 +301,7 @@
 		#basicProfileInfo{
 			display: inline-block;
 			text-align: right;
+			vertical-align: bottom;
 			float: right;
 			margin-right: 20px;
 	
@@ -326,13 +328,16 @@
 
 /*Stays Index*/
 	#infoLabel{
-		height: 200px;
+		height: 250px;
+		padding-top: 50px;
 		width: 78%;
 		background-color: black;
 		color: white;
 		font-size: 22px;
 		margin-bottom: 10px;
 		font-family: 'Open Sans', sans-serif;
+		border-radius: 5px;
+		border: 2px solid #D9A134;
 		#infoText{
 			display: block;
 			text-align: center;
@@ -340,14 +345,14 @@
 
 		}
 		#newStayButton{
-			background-color: white;
+			background-color: #D9A134;
 			border-radius: 5px;
 			width: 110px;
 			display: block;
 			margin: auto;
 			text-align: center;
 			a{
-				color: #191970;
+				color: black;
 				font-family: 'Open Sans', sans-serif;
 
 			}
@@ -356,16 +361,24 @@
 	#allStays{
 		width: 78%;
 		position: relative;
+		.ui.segment{
+			border-color: #D9A134;
+			.ui.divider{
+				border-color: #D9A134;
+			}
+		}
 		.staysShow{
 			width: 30%;
 			display: inline-block;
 			vertical-align: top;
-			border: 2px solid #E5E5E5;
+			border: 2px solid #D9A134;
 			border-radius: 5px;
 			margin: 1.5%;
 			position: relative;
 			height: 220px;
 			#hotelStayPic{
+				border-radius: 5px;
+				margin-top: 10px;
 
 			}
 			#titleStay{
@@ -397,10 +410,13 @@
 /*Stays New Edit Show*/
 	#formBox{
 		width: 79%;
-		border: 2px solid #E5E5E5;
+		border: 2px solid #D9A134;
 		margin-top: 10px;
 		border-radius: 5px;
 		text-align: top;
+		.ui.divider{
+			border: 1px solid #D9A134;
+		}
 		/*Stay New Edit*/
 		#stayForm{
 			margin: 2%;
@@ -432,6 +448,22 @@
 			}
 		}
 		#stayShowFeatures{
+			input:hover{
+				color: white;
+			}
+
+			a{
+				color: black;
+				:hover{
+					color: white;
+				}
+			}
+			i{
+				color: black;
+				:hover{
+					color: white;
+				}
+			}
 			width: 32%;
 			display: inline-block;
 			text-align: center;
@@ -439,19 +471,38 @@
 			float: right;
 			padding-bottom: 5px;
 			font-size: 15px;
+			#dndButton{
+				display: inline-block;
+				width: 73px;
+				height: 73px;
+				border-radius: 5px;
+				background-color: #D9A134;
+				margin: 2px;
+				float: right;
+				border: 0px solid black;
+				#dnd{
+					width: 73px;
+					height: 50px;
+					background-color: #D9A134;
+					border: 0px solid white;
+					:hover{
+						color: white;
+					}
+				}
+			}
 			.featureItem{
 				display: inline-block;
 				width: 73px;
 				height: 73px;
 				border-radius: 5px;
-				background-color: #E5E5E5;
+				background-color: #D9A134;
 				margin: 2px;
 				float: right;
 			}
 			.editDeleteLink{
 				float: right;
 				display: inline-block;
-				background-color: #E5E5E5;
+				background-color: #D9A134;
 				border-radius: 5px;
 				height: 73px;
 				width: 73px;
@@ -474,9 +525,19 @@
 		}
 	}
 
+	#tableSize{
+		border: 2px solid #D9A134;
+	}
 
+	#chat{
+		width: 500px;
+		height: 500px;
+		border: 2px solid #D9A134;
+	}
 
 }
+
+
 
 
 
