@@ -1,10 +1,6 @@
-
-
-
-
 <div id= "profileInfo">
 	<div id= "profileImage">
-		<%= image_tag "http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-6.jpg" %>
+		<td><%=image_tag @user.avatar.url %></td>
 		<button id="profileButton" class="ui icon button" title="Change Your Profile Picture">
   		<i class="photo icon"></i>
 		</button>
@@ -48,7 +44,6 @@
 
 </div>
 
-
 <div class="ui modal">
   <i class="close icon"></i>
   <div class="header">
@@ -64,17 +59,13 @@
       
       <%= form_for @user do |f|  %>
 
-
-      <div class="field">
-          <div class="ui left icon input">
-          <%= f.label :image %>
-           <%=f.text_field :image%>
-          <i class="photo icon"></i>
-          </div>
-       </div>
-
-
-        
+	<div class="field">
+		<div class="ui left icon input">
+        	<%= f.label :avatar %>
+        	<%=f.file_field :avatar%>
+        	<i class="photo icon"></i>
+        </div>
+	</div>        
 
     </div>
   </div>

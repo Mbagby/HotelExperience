@@ -16,9 +16,9 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find_by_id(session[:user_id])
-    @user.image = params[:user][:image]
-    @user.update_attribute(:image, @user.image)
-    redirect_to users_path(@user)
+    @user.avatar = params[:user][:avatar]
+    @user.update_attribute(:avatar, @user.avatar)
+    redirect_to user_path(@user)
 
   end
 
@@ -37,7 +37,7 @@ class UsersController < ApplicationController
       :password,
       :first_name,
       :last_name,
-      :image
+      :avatar
     )
   end
 

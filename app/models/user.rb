@@ -4,6 +4,9 @@ class User < ActiveRecord::Base
 	validates :password, presence: { message: "Story title is required" }
 	validates :password, length: {minimum: 8, maximum: 20}
 
+	has_attached_file :avatar, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-6.jpg"
+  	validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\Z/
+
 	has_many :hotels
 	has_many :rooms
 	has_many :stays
