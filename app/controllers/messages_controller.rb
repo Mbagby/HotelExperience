@@ -4,7 +4,7 @@ class MessagesController < ApplicationController
     @messages = Message.last(10)
     @users = User.all
   end
-
+  
 
   def create
   	@user = User.find_by_id(session[:user_id])
