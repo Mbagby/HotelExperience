@@ -61,76 +61,76 @@ hotels= Hotel.create([
 
 # Need hotel ID to be manually put in
 rooms = Room.create([
-	{number: "1000"
-	floor: "10"
+	{number: "1000",
+	floor: "10",
 	tower: "Forum"
 	},
-	{number: "1010"
-	floor: "10"
+	{number: "1010",
+	floor: "10",
 	tower: "Forum"
 	},
-	{number: "1020"
-	floor: "10"
+	{number: "1020",
+	floor: "10",
 	tower: "Forum"
 	},
-	{number: "1030"
-	floor: "10"
+	{number: "1030",
+	floor: "10",
 	tower: "Forum"
 	},
-	{number: "1040"
-	floor: "10"
+	{number: "1040",
+	floor: "10",
 	tower: "Forum"
 	},
-	{number: "1050"
-	floor: "10"
+	{number: "1050",
+	floor: "10",
 	tower: "Forum"
 	},
-	{number: "1100"
-	floor: "11"
+	{number: "1100",
+	floor: "11",
 	tower: "Forum"
 	},
-	{number: "1110"
-	floor: "11"
+	{number: "1110",
+	floor: "11",
 	tower: "Forum"
 	},
-	{number: "1120"
-	floor: "11"
+	{number: "1120",
+	floor: "11",
 	tower: "Forum"
 	},
-	{number: "1130"
-	floor: "11"
+	{number: "1130",
+	floor: "11",
 	tower: "Forum"
 	},
-	{number: "1140"
-	floor: "11"
+	{number: "1140",
+	floor: "11",
 	tower: "Forum"
 	},
-	{number: "1150"
-	floor: "11"
+	{number: "1150",
+	floor: "11",
 	tower: "Forum"
 	},
-	{number: "1200"
-	floor: "11"
+	{number: "1200",
+	floor: "11",
 	tower: "Forum"
 	},
-	{number: "1210"
-	floor: "11"
+	{number: "1210",
+	floor: "11",
 	tower: "Forum"
 	},
-	{number: "1220"
-	floor: "11"
+	{number: "1220",
+	floor: "11",
 	tower: "Forum"
 	},
-	{number: "1230"
-	floor: "11"
+	{number: "1230",
+	floor: "11",
 	tower: "Forum"
 	},
-	{number: "1240"
-	floor: "11"
+	{number: "1240",
+	floor: "11",
 	tower: "Forum"
 	},
-	{number: "1250"
-	floor: "11"
+	{number: "1250",
+	floor: "11",
 	tower: "Forum"
 	},
 	])	
