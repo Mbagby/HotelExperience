@@ -3,6 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 /*Iphone 6*/
+
 @media screen and (min-device-width: 376px) and (max-width: 414px){
 	.pictureBackground{
 		background-image: url("Mountain");
@@ -429,10 +430,9 @@
 			}
 		}
 		#submitStay{
-				float:right;
 				margin-right: 2%;
 				margin-top: 7px;
-				width: 125px;
+				width: 240px;
 				input{
 					font-size: 15px;
 					width: 100%;
@@ -549,7 +549,7 @@
 		}
 		#submitStay{
 			font-size: 15px;
-			margin-top: 5px;
+			margin-top: 10px;
 		}
 	}
 

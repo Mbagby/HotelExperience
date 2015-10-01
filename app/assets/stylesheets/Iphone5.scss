@@ -23,7 +23,8 @@
 				margin: 0 auto;
 			}
 			#boxSignup{
-				width: 87%;
+				width: 87%
+				;
 				float: center;
 				margin: 0 auto;
 				margin-bottom: 10px;
@@ -438,10 +439,9 @@
 			}
 		}
 		#submitStay{
-				float:right;
 				margin-right: 2%;
 				margin-top: 7px;
-				width: 125px;
+				width: 240px;
 				input{
 					font-size: 15px;
 					width: 100%;
@@ -558,7 +558,7 @@
 		}
 		#submitStay{
 			font-size: 15px;
-			margin-top: 5px;
+			margin-top: 10px;
 		}
 	}
 

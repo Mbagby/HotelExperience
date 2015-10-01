@@ -43,7 +43,7 @@
 				font-size: 20px;
 			}	
 			#signupHead{
-				margin-top: 25%;
+				margin-top: 15%;
 				color: #D9A134;
 				font-size: 22px;
 				padding-left: 20px;
@@ -52,7 +52,7 @@
 				padding-right:20px;
 			}
 			#loginSignupHead{
-				margin-top: 50%;
+				margin-top: 30%;
 				color: #D9A134;
 				font-size: 22px;
 				padding-left: 20px;
@@ -78,11 +78,11 @@
 	#topMenu{
 		width: 100%;
 		text-align: left;
-		font-size: 13px;
+		font-size: 12px;
 		padding-top: 1%;
 		padding-bottom: 1%;
    		#search{
-   			font-size: 10px;
+   			font-size: 8px;
    		}
    		a{
    			color: black;
@@ -357,6 +357,7 @@
 					font-size: 18px;
 					color: black;
 			}
+
 		}
 		.staysShow{
 			width: 46%;
@@ -380,12 +381,16 @@
 			#titleStay{
 				text-align: center;
 				display: inline-block;
-				background-color: #D9E2F6;
+				background-color: #00004C;
 				width: 100%;
 				min-height: 75px;
 				a{
 					font-size: 14px;
-					color: black;
+					color: white;
+				}
+				img{
+					border-radius: 5px;
+					border: 2px solid white;
 				}
 			}
 		}
@@ -429,10 +434,9 @@
 			}
 		}
 		#submitStay{
-				float:right;
 				margin-right: 2%;
 				margin-top: 7px;
-				width: 125px;
+				width: 240px;
 				input{
 					font-size: 15px;
 					width: 100%;
@@ -549,7 +553,7 @@
 		}
 		#submitStay{
 			font-size: 15px;
-			margin-top: 5px;
+			margin-top: 10px;
 		}
 	}
 

@@ -1,7 +1,7 @@
 
 <div id ="formBox">
 
-<div class="ui segment">
+
     <h2 class="ui right floated header"><%= @stay.title %></h2>
     <div class="ui clearing divider"></div>
 
@@ -35,43 +35,39 @@
 			</div>
 			<div>
 				<span>Checkin: <%= @stay.checkout %></span>
-			</div> 	
-		</div>
+			</div> 
 
-		
+		</div>
 
 		<div id="stayShowFeatures">
 			
+		<%= form_for @stay, url: user_stay_path(@user, @stay.id) do |f|  %>
 		
-
-<%= form_for @stay, url: user_stay_path(@user, @stay.id) do |f|  %>
-
-<% if @stay.do_not_disturb == false %>
-<div id="dndButton">
-<%= f.hidden_field :do_not_disturb, :value => true %>
-<i class="alarm icon"></i></br><%= f.submit "Turn On&#x00A;DND".html_safe, id: "dnd"%>
-</div>
-<% else %>
-<div id="dndButton">
-<%= f.hidden_field :do_not_disturb, :value => false %>
-<i class="alarm slash icon"></i></br><%= f.submit "Turn Off&#x00A;DND".html_safe, id: "dnd"%>
-</div>
-<%end %>
-
-<%end%>
+			<% if @stay.do_not_disturb == false %>
+				<div id="dndButton">
+					<%= f.hidden_field :do_not_disturb, :value => true %>
+					<i class="alarm icon"></i></br><%= f.submit "Turn On&#x00A;DND".html_safe, id: "dnd"%>
+				</div>
+			<% else %>
+				<div id="dndButton">
+					<%= f.hidden_field :do_not_disturb, :value => false %>
+					<i class="alarm slash icon"></i></br><%= f.submit "Turn Off&#x00A;DND".html_safe, id: "dnd"%>
+				</div>
+			<%end %>
+		<%end%>
 
 		<% if @stay.checkin <= @currentDate && @stay.checkout >= @currentDate %>
-					<%= link_to '<div class="featureItem" title="Submit A Maintance Request"><i class="travel icon"></i>Maintance Request</div>'.html_safe, new_user_stay_work_order_path(@user.id, @stay.id)%>
-			<%else%>
-				<div class="featureItem"><i class="comments outline icon"></i></br>Leave A Comment</div>
-			<%end%>
+			<%= link_to '<div class="featureItem" title="Submit A Maintance Request"><i class="travel icon"></i>Maintance Request</div>'.html_safe, new_user_stay_work_order_path(@user.id, @stay.id)%>
+		<%else%>
+			<div class="featureItem"><i class="comments outline icon"></i></br>Leave A Comment</div>
+		<%end%>
 
-			<%if @stay.user_id == session[:user_id]  %>
-				<%= link_to '<div class="editDeleteLink"><i class="remove icon"></i></br>Delete Your Stay</div>'.html_safe, user_stay_path(@user, @stay) , method: :delete, data: { confirm: 'Are you sure?' }%>
+		<%if @stay.user_id == session[:user_id]  %>
+			<%= link_to '<div class="editDeleteLink"><i class="remove icon"></i></br>Delete Your Stay</div>'.html_safe, user_stay_path(@user, @stay) , method: :delete, data: { confirm: 'Are you sure?' }%>
 				<%= link_to '<div class="editDeleteLink"><i class="write icon"></i></br>Edit Your Stay</div>'.html_safe, edit_user_stay_path(@user, @stay)%>
-			<%end %>
+		<%end %>
+
 		</div>
-
 </div>
 
-</div>
+
