@@ -13,6 +13,9 @@
 		height: 100%;
 		width: 100%;
 		overflow-x: hidden;
+		.ui.grid{
+			margin-top: -6rem;
+		}
 		#pageContent{
 			opacity: 50%;
 			#linkTo{
@@ -81,11 +84,11 @@
 	#topMenu{
 		width: 100%;
 		text-align: left;
-		font-size: 11px;
+		font-size: 9px;
 		padding-top: 1%;
 		padding-bottom: 1%;
    		 #search{
-   			font-size: 8px;
+   			font-size: 7px;
    		}
    		a{
    			color: black;
