@@ -4,6 +4,17 @@
 
 
 @media screen and (max-width: 1160px){
+	#bottomMenu{
+		background-image: url("Mountain");
+		height: 40px;
+		width: 100%;
+		background-position: 77% 64%;
+		a{
+			font-size: 13px;
+			color: black;
+			font-weight: bold;
+		}
+	}
 	.pictureBackground{
 		background-image: url("Mountain");
 		background-repeat:no-repeat;
@@ -97,7 +108,7 @@
 		width:100%;
 		display: inline-block;
 		padding-top: 3%;
-		padding-bottom: 2%;
+		padding-bottom: 4%;
 		padding-right: 2%;
 		padding-left: 2%;
 		.rowOne{
@@ -245,8 +256,8 @@
 	}
 	/*User Show */
 	#profileInfo{
+		position: relative;
 		width: 100%;
-		height: 560px;
 		border: 2px solid #E5E5E5;
 		margin-top: 10px;
 		border-radius: 5px;
@@ -270,9 +281,63 @@
 		}
 		#profileImage{
 			display: inline-block;
-	
+			img{
+				width: 250px;
+				border-radius: 5px;
+				display: inline-block;
+				position: relative;
+			}
+			#profileButton{
+				position: absolute;
+				top: 0px;
+				left:0px;
+				width: 35px;
+				height: 35px;
+			}	
 		}
 	}
+	.staysShow{
+			width: 46%;
+			display: inline-block;
+			vertical-align: top;
+			border: 2px solid #D9A134;
+			border-radius: 5px;
+			margin: 1.5%;
+			position: relative;
+			height: 175px;
+			img{
+				border-radius: 5px;
+			}
+			#hotelStayPic{
+				border-radius: 5px;
+				margin-top: 10px;
+			}
+			#hotelStayName{
+				font-size: 12px
+			}
+
+			#checkInOutStay{
+				font-size: 12px;
+			}
+			#titleStay{
+				text-align: center;
+				display: inline-block;
+				background-color: #D9E2F6;
+				width: 100%;
+				min-height: 75px;
+				a{
+					font-size: 16px;
+					color: black;
+				}
+				img{
+					border-radius: 5px;
+					border: 0px solid white;
+				}
+			}
+		}
+
+
+
 /*User Show End*/
 
 
@@ -357,7 +422,11 @@
 				margin-top: 10px;
 			}
 			#hotelStayName{
-				font-size: 12px
+				font-size: 12px;
+			}
+			#hotelStayNameUserShow{
+				font-size: 15px;
+				margin-bottom: 5px;
 			}
 			#checkInOutStay{
 				font-size: 12px;
@@ -449,7 +518,9 @@
 			h2{
 				font-size: 35px;
 				margin-bottom: 10px;
-				margin-top: 10px;
+			}
+			#stayShowHotelDescription{
+				margin-bottom: 10px;
 			}
 		}
 		#stayShowFeatures{

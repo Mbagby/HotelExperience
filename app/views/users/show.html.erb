@@ -22,18 +22,25 @@
 
 
 	<% @stays.each do |stay| %>
-		<div class ="stays">
-	 		<div>
-				<h2> <%= stay.title %> </h2>
-				<h2> <%= stay.user_id %> </h2>
-			</div>
-			<div>
-				<span>Checkin: <%= stay.checkin %></span>
-				<span>Checkin: <%= stay.checkout %></span>
-			</div>
-			<div>
-				<%= stay.hotel_id %>
+		<div class ="staysShow">
+	 		<div id= "titleStay">
+			<div id="hotelStay">
+				<div id="hotelStayPic">
+					<img src = "<%= @hotels.find_by_id(stay.hotel_id).image_url%>" style="width:100px" ></img>
+				</div>
 			</div> 	
+				<%= link_to stay.title, user_stay_path(@user.id, stay.id)%>
+			</div>
+			<div id="hotelStayNameUserShow">
+				<%= @hotels.find_by_id(stay.hotel_id).name%>
+			</div>
+			<div id="checkInOutStay">
+				<p>Check-in: <%= stay.checkin%></p>
+			</div>
+			<div id="checkInOutStay">
+				<p>Check-out: <%= stay.checkout%></p>
+			</div>
+
 		</div>
 	<% end %>
 

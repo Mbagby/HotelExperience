@@ -22,6 +22,10 @@
  				<img src = "<%= @hotels.find_by_id(@stay.hotel_id).image_url%>"></img>
  			</div>
 
+ 			<div id="stayShowHotelDescription">
+ 				Description: <%= @hotels.find_by_id(@stay.hotel_id).description %>
+ 			</div>
+
  			<div id="stayShowHotelAddress">
  				Address: <%= @hotels.find_by_id(@stay.hotel_id).address %>
  			</div>
@@ -61,6 +65,8 @@
 		<%else%>
 			<div class="featureItem"><i class="comments outline icon"></i></br>Leave A Comment</div>
 		<%end%>
+
+		<%= link_to '<div class="editDeleteLink" title="Chat With A Front Desk Employee"><i class="announcement icon"></i></br>Front Desk Chat</div>'.html_safe, user_messages_path(@user.id)%>
 
 		<%if @stay.user_id == session[:user_id]  %>
 			<%= link_to '<div class="editDeleteLink"><i class="remove icon"></i></br>Delete Your Stay</div>'.html_safe, user_stay_path(@user, @stay) , method: :delete, data: { confirm: 'Are you sure?' }%>

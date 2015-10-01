@@ -8,6 +8,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find_by_id(session[:user_id])
     @stays = @user.stays.order('checkin')
+    @hotels = Hotel.all
   end
 
   def edit

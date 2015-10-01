@@ -96,9 +96,25 @@
       </div>
   </div>
 
-
-
 <%= yield %>
+</div>
+
+<div class="ui bottom fixed menu" id="bottomMenu">
+
+  <div class="item" title="View Your Profile">
+    <i class="user icon"></i>
+    <%= link_to "My Profile", user_path(session[:user_id]) %>
+  </div>
+  <div class="item" title="Submit A Maintance Request">
+    <i class="warning sign icon"></i>
+    <%= link_to "Maintance", user_work_orders_path(session[:user_id]) %>
+  </div>
+
+  <div class="item" title="Submit A Maintance Request">
+    <i class="comments outline icon"></i>
+    <%= link_to "Front Desk Chat", user_messages_path(session[:user_id]) %>
+  </div>
+
 </div>
 
 </body>
