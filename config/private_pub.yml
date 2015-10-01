@@ -6,5 +6,5 @@ test:
   secret_token: "secret"
 production:
   server: "http://example.com/faye"
-  secret_token: "65e93977ce2435b69af1b40be99c5d768302e739564039dc4f593f5f9a24a09a"
+  secret_token: <%= ENV["SECRET_KEY_PRIVATE_PUB"] %>
   signature_expiration: 3600 # one hour
