@@ -264,6 +264,8 @@
 			border-radius: 3px;
 		}
 	}
+	
+/*User Show */
 	#profileInfo{
 		width: 100%;
 		height: 560px;
@@ -275,8 +277,8 @@
 			display: inline-block;
 			text-align: right;
 			float: right;
-			margin-top: 7px;
 			margin-right: 7px;
+			margin-top: 7px;
 			#firstLastName{
 				font-size: 20px;
 			}
@@ -292,6 +294,284 @@
 			display: inline-block;
 	
 		}
+	}
+/*User Show End*/
+
+
+/*Stays Index*/
+	#infoLabel{
+		height: 100px;
+		padding-top: 5px;
+		width: 100%;
+		background-color: black;
+		color: white;
+		font-size: 15px;
+		margin-bottom: 5px;
+		font-family: 'Open Sans', sans-serif;
+		border-radius: 5px;
+		border: 2px solid #D9A134;
+		#infoText{
+			display: block;
+			text-align: center;
+
+		}
+		#newStayButton{
+			background-color: #D9A134;
+			border-radius: 5px;
+			width: 110px;
+			display: block;
+			margin: auto;
+			text-align: center;
+			a{
+				color: black;
+				font-family: 'Open Sans', sans-serif;
+			}
+		}
+	}
+	#allStays{
+		width: 100%;
+		position: relative;
+		.ui.segment{
+			border-color: #D9A134;
+			.ui.divider{
+				border-color: #D9A134;
+			}
+		}
+		#staysShowCurrent{
+			width: 100%;
+			display: inline-block;
+			vertical-align: top;
+			border: 2px solid #D9A134;
+			border-radius: 5px;
+			margin: 1.5%;
+			position: relative;
+			height: 220px;
+			#hotelStayName{
+				margin-top: 2px;
+				font-size: 12px
+			}
+			#checkInOutStay{
+				font-size: 12px;
+			}
+			#titleStay a{
+					font-size: 18px;
+					color: black;
+			}
+		}
+		.staysShow{
+			width: 46%;
+			display: inline-block;
+			vertical-align: top;
+			border: 2px solid #D9A134;
+			border-radius: 5px;
+			margin: 1.5%;
+			position: relative;
+			height: 220px;
+			#hotelStayPic{
+				border-radius: 5px;
+				margin-top: 10px;
+			}
+			#hotelStayName{
+				font-size: 10px
+			}
+			#checkInOutStay{
+				font-size: 10px;
+			}
+			#titleStay{
+				text-align: center;
+				display: inline-block;
+				background-color: #D9E2F6;
+				width: 100%;
+				min-height: 75px;
+				a{
+					font-size: 14px;
+					color: black;
+				}
+			}
+		}
+		.featureSelection{
+			position: absolute;
+			bottom: 2px;
+			.featureItem{
+				margin: 2px;
+				display: inline-block;
+				background-color: #D9E2F6;
+				border-radius: 2px;
+			}
+		}
+	}
+/*Stays Index End*/
+
+/*Stays New Edit Show*/
+	#formBox{
+		width: 100%;
+		border: 2px solid #D9A134;
+		margin-top: 10px;
+		border-radius: 5px;
+		text-align: top;
+		.ui.divider{
+			border: 1px solid #D9A134;
+		}
+		/*Stay New Edit*/
+		#stayForm{
+			display: inline-block;
+			margin: 1%;
+			width: 100%;
+			#title{
+				width: 100%;
+			}
+
+			.twoBlock{
+				display: inline-block;
+				margin-top: 7px;
+				margin-bottom: 7px;
+				width: 100%;
+			}
+		}
+		#submitStay{
+				float:right;
+				margin-right: 2%;
+				margin-top: 7px;
+				width: 125px;
+				input{
+					font-size: 15px;
+					width: 100%;
+					height: 50px;
+					border: 0px solid black;
+					border-radius: 5px;
+					background-color: #D9A134;
+		}
+			#calendar{
+				height: 30px;
+			}	
+		}
+		/*Stay Show*/
+		#stayShowInfo{
+			div{
+				display: inline-block;
+			}
+			display: inline-block;
+			width: 100%;
+			img{
+				width: 150px;
+				border-radius: 5px;
+				text-align: center;
+			}
+			#stayShowHotelName{
+				font-size: 22px;
+				text-align: center;
+			}
+			h2{
+				font-size: 30px;
+				text-align: center;
+			}
+			span{
+
+			}
+		}
+		#stayShowFeatures{
+			display: inline-block;
+			input:hover{
+				color: white;
+			}
+			a{
+				color: black;
+				:hover{
+					color: white;
+				}
+			}
+			i{
+				color: black;
+				:hover{
+					color: white;
+				}
+			}
+			width: 32%;
+			text-align: center;
+			vertical-align:top;
+			float: right;
+			padding-bottom: 5px;
+			font-size: 15px;
+			#dndButton{
+				display: inline-block;
+				width: 73px;
+				height: 73px;
+				border-radius: 5px;
+				background-color: #D9A134;
+				margin: 2px;
+				float: right;
+				border: 0px solid black;
+				#dnd{
+					width: 73px;
+					height: 50px;
+					background-color: #D9A134;
+					border: 0px solid white;
+					:hover{
+						color: white;
+					}
+				}
+			}
+			.featureItem{
+				display: inline-block;
+				width: 73px;
+				height: 73px;
+				border-radius: 5px;
+				background-color: #D9A134;
+				margin: 2px;
+				float: right;
+			}
+			.editDeleteLink{
+				display: inline-block;
+				float: right;
+				background-color: #D9A134;
+				border-radius: 5px;
+				height: 73px;
+				width: 73px;
+				margin: 2px;
+			}
+		}
+		#submitStay{
+			background-color: #D9A134;
+			input{
+				border-color: 0px solid white;
+				color: black;
+			}
+		}
+	}
+/*Stays New Edit Show End*/	
+	
+/*WorkOrders New*/
+	#workOrderForm{
+		margin: 1%;
+		#work_order_image{
+			font-size: 15px;
+			text-align: center;
+		}
+		#submitStay{
+			font-size: 15px;
+			margin-top: 5px;
+		}
+	}
+
+	#tableSize{
+		border: 2px solid #D9A134;
+	}
+
+	#chat{
+		width: 500px;
+		height: 500px;
+	}
+	#chatDiv{
+		width: 78%;
+		height:500px;
+		overflow-y: scroll;
+		border-radius: 5px;
+		border: 2px solid #D9A134;
+	}
+
+
+	#tableSize{
+		width: 78%;
 	}
 }
 
