@@ -407,6 +407,38 @@
 				font-family: 'Open Sans', sans-serif;
 			}
 		}
+		#infoLabelComp{
+		height: 100px;
+		padding-top: 5px;
+		width: 100%;
+		background-color: black;
+		color: white;
+		font-size: 15px;
+		margin-bottom: 5px;
+		font-family: 'Open Sans', sans-serif;
+		border-radius: 5px;
+		border: 2px solid #D9A134;
+		#infoText{
+			display: block;
+			text-align: center;
+
+		}
+		#newStayButton{
+			background-color: #D9A134;
+			border-radius: 5px;
+			width: 110px;
+			display: block;
+			margin: auto;
+			text-align: center;
+			p{
+			font-size: 15px;
+			}	
+			a{
+				color: black;
+				font-family: 'Open Sans', sans-serif;
+			}
+		}
+	}
 	}
 	#allStays{
 		width: 100%;

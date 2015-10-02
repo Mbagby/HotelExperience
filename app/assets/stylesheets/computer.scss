@@ -387,7 +387,7 @@
 /*User Show End*/
 
 /*Stays Index*/
-	#infoLabel{
+	#infoLabelComp{
 		height: 250px;
 		padding-top: 50px;
 		width: 78%;
@@ -404,6 +404,11 @@
 			padding-top: 30px;
 
 		}
+		#infoText{
+			display: block;
+			text-align: center;
+
+		}
 		#newStayButton{
 			background-color: #D9A134;
 			border-radius: 5px;
@@ -414,9 +419,32 @@
 			a{
 				color: black;
 				font-family: 'Open Sans', sans-serif;
-
 			}
 		}
+	}
+	#infoLabelCompChat{
+		background-image: url("desk");
+		background-repeat:no-repeat;
+		background-size: cover;
+		height: 300px;
+		padding-top: 90px;
+		width: 78%;
+		color: white;
+		font-size: 22px;
+		margin-bottom: 10px;
+		font-family: 'Open Sans', sans-serif;
+		border-radius: 5px;
+		border: 2px solid #D9A134;
+		#infoText{
+			font-weight: bold;
+			display: block;
+			text-align: center;
+			padding-top: 142px;
+
+		}
+	}
+	#infoLabel{
+		display: none !important;
 	}
 	#allStays{
 		width: 78%;
@@ -514,7 +542,8 @@
 		/*Stay Show*/
 		#stayShowInfo{
 			display: inline-block;
-			width: 67%;
+			width: 66%;
+			margin-left: 1%;
 			img{
 				width: 250px;
 				border-radius: 5px;
@@ -628,13 +657,11 @@
 	}
 	#chatDiv{
 		width: 78%;
-		height:500px;
+		height:300px;
 		overflow-y: scroll;
 		border-radius: 5px;
 		border: 2px solid #D9A134;
 	}
-
-
 	#tableSize{
 		width: 78%;
 	}
