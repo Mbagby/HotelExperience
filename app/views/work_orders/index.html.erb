@@ -1,4 +1,6 @@
-
+<div id ="infoLabel">
+  
+</div>
 
 
 
@@ -10,20 +12,32 @@
     <th>Description</th>
     <th>Hotel</th>
     <th>Room</th>
+    <th>Edit</th>
+    <th>Delete</th>
   </tr></thead>
   <tbody>
 <% @workOrders.each do |workOrder|%>
+<%if workOrder.user_id == session[:user_id]  %>
+
+
     <tr>
-        <td><%=image_tag workOrder.image.url(:thumb) %></td>
+      <td><%=image_tag workOrder.image.url(:thumb) %></td>
     	<td><%=workOrder.created_at%></td>
     	<td><%=workOrder.description%></td>
-    	<td><%=workOrder.hotel_id%></td>
-    	<td><%=workOrder.room_id%></td>
+    	<td><%=@hotels.find_by_id(workOrder.hotel_id).name%></td>
+    	<td><%=@rooms.find_by_id(workOrder.room_id).number%></td>
+      <td><%= link_to 'Edit', edit_work_order_path(workOrder.id)%></td>
+      <td> <%= link_to 'Delete', work_order_path(workOrder.id) , method: :delete, data: { confirm: 'Are you sure?' }%></td>
     </tr>
     <%end%>
+
+
+<%end %>
    </tbody>
 </table>
 
+
+    
 
 
 

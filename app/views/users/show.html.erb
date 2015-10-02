@@ -54,17 +54,13 @@
       <img src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-6.jpg">
     </div>
     <div class="description">
-      <div class="ui header">We've chosen a kickass profile image for you.</div>
-      <p>In case you do not appreciate our efforts, feel free to add your own profile picture</p>
+      <div class="ui header" id="titleModal">We've chosen a kickass profile image for you!</div>
+      <p>But... just in case you do not appreciate our efforts, feel free to add your own profile picture.</p>
       
       <%= form_for @user do |f|  %>
 
 	<div class="field">
-		<div class="ui left icon input">
-        	<%= f.label :avatar %>
-        	<%=f.file_field :avatar%>
-        	<i class="photo icon"></i>
-        </div>
+        	Avatar Image: <%=f.file_field :avatar%>   	
 	</div>        
 
     </div>
@@ -74,7 +70,7 @@
       Meh, yours is better.
     </div>
 
-    <div class="ui positive right labeled button">
+    <div  id="submitUserEdit">
       <%= f.submit "Update Profile Picture" %>
     </div>
 

@@ -31,8 +31,6 @@ get "/", to: "sessions#login"
   get '/signup', to: "sessions#signup", as: 'signup'
   post '/signup', to: "sessions#create"
 
-  #messages
-
   #logout
   delete 'logout', to: "sessions#logout", as: "logout"
 

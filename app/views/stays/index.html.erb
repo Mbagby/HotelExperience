@@ -1,6 +1,6 @@
 
 <div id ="infoLabel">
-	<p id="infoText">Select or add a stay in order to use the feautures</p>
+	<p id="infoText">Select or add a stay in order to use the features</p>
 	<div id = "newStayButton"><%= link_to "New Stay", new_user_stay_path(@user.id) %></div>
 </div>
 
@@ -17,10 +17,7 @@
 	<% @stays.each do |stay| %>
 		
 		<% if stay.checkin <= @currentDate && stay.checkout >= @currentDate %>
-		<div class ="staysShow" id="staysShowCurrent">
-
-
-			
+		<div class ="staysShow" id="staysShowCurrent">			
 	
 			<div id= "titleStay">
 			<div id="hotelStay">
