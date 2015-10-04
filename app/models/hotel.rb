@@ -1,6 +1,9 @@
 class Hotel < ActiveRecord::Base
-	has_many :stays
-	has_many :rooms
-	has_many :users
+	belongs_to :users
+	belongs_to :room
+	belongs_to :hotel
+	belongs_to :stay
+	has_many :dayservices
+	has_many :eveningservices
 	has_many :work_orders
 end

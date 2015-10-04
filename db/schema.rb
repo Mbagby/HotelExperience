@@ -11,10 +11,44 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151001202259) do
+ActiveRecord::Schema.define(version: 20151004024602) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "dayservices", force: :cascade do |t|
+    t.date     "appointment_date"
+    t.time     "appointment_time"
+    t.boolean  "completion",       default: false
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
+    t.integer  "user_id"
+    t.integer  "stay_id"
+    t.integer  "hotel_id"
+    t.integer  "room_id"
+  end
+
+  add_index "dayservices", ["hotel_id"], name: "index_dayservices_on_hotel_id", using: :btree
+  add_index "dayservices", ["room_id"], name: "index_dayservices_on_room_id", using: :btree
+  add_index "dayservices", ["stay_id"], name: "index_dayservices_on_stay_id", using: :btree
+  add_index "dayservices", ["user_id"], name: "index_dayservices_on_user_id", using: :btree
+
+  create_table "eveningservices", force: :cascade do |t|
+    t.date     "appointment_date"
+    t.time     "appointment_time"
+    t.boolean  "completion",       default: false
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
+    t.integer  "user_id"
+    t.integer  "stay_id"
+    t.integer  "hotel_id"
+    t.integer  "room_id"
+  end
+
+  add_index "eveningservices", ["hotel_id"], name: "index_eveningservices_on_hotel_id", using: :btree
+  add_index "eveningservices", ["room_id"], name: "index_eveningservices_on_room_id", using: :btree
+  add_index "eveningservices", ["stay_id"], name: "index_eveningservices_on_stay_id", using: :btree
+  add_index "eveningservices", ["user_id"], name: "index_eveningservices_on_user_id", using: :btree
 
   create_table "hotels", force: :cascade do |t|
     t.string   "name"
@@ -97,6 +131,14 @@ ActiveRecord::Schema.define(version: 20151001202259) do
   add_index "work_orders", ["stay_id"], name: "index_work_orders_on_stay_id", using: :btree
   add_index "work_orders", ["user_id"], name: "index_work_orders_on_user_id", using: :btree
 
+  add_foreign_key "dayservices", "hotels"
+  add_foreign_key "dayservices", "rooms"
+  add_foreign_key "dayservices", "stays"
+  add_foreign_key "dayservices", "users"
+  add_foreign_key "eveningservices", "hotels"
+  add_foreign_key "eveningservices", "rooms"
+  add_foreign_key "eveningservices", "stays"
+  add_foreign_key "eveningservices", "users"
   add_foreign_key "messages", "users"
   add_foreign_key "rooms", "hotels"
   add_foreign_key "stays", "hotels"

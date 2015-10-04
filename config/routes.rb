@@ -1,5 +1,21 @@
 Rails.application.routes.draw do
 
+  get 'eveningservices/index'
+
+  get 'eveningservices/new'
+
+  get 'eveningservices/edit'
+
+  get 'eveningservices/show'
+
+  get 'dayservices/index'
+
+  get 'dayservices/new'
+
+  get 'dayservices/edit'
+
+  get 'dayservices/show'
+
   get 'reset/edit'
   get 'reset/new'
 
