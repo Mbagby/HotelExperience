@@ -22,8 +22,9 @@ gem 'pry'
 
 # gem 'rails_12factor', :group => :production
 
-gem 'jquery-ui-rails'
+gem 'jquery-star-rating-rails'
 
+gem 'jquery-ui-rails'
 gem 'private_pub'
 gem 'thin'
 

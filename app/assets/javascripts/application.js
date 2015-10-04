@@ -20,15 +20,18 @@
 
 // Loads all Semantic javascripts
 //= require semantic-ui
-
 //= require moment
 //= require jquery-ui/datepicker
+//= require jquery-star-rating
 //= require bootstrap-datetimepicker
 
 
 
 $(document).on('page:load', function() {
 
+
+
+$('.stars').rating();
 
 $('#tableSize').DataTable();
 

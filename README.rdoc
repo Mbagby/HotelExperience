@@ -1,5 +1,7 @@
 The Hotel Experience(Liberated)
 
+https://the-hotel-experience.herokuapp.com/
+
    The Hotel Experience was developed to improve customer experience within any given hotel that implements and uses the app. It allows the user, or rather ‘guest’, to do many of the actions that would usually be done by speaking with the front desk or concierge, all through one simple interface online. Log your stays, submit a maintenance request, place a virtual "do not disturb", and chat online with the front desk are just some of the included features. The Hotel Experience was created using a Ruby on Rails framework, PostgreSQl database, Sass styling, and jQuery, with additional functionality by Semantic.ui, Bootstrap, Paperclip, Image Magick, This, Faye, Private_pub, and Moment.js to name a few. 
    
    
@@ -12,4 +14,4 @@ Features:
 
 4)Virtual Do Not Disturb- Toggle the do not disturb for your room simply by clicking one button. Stop hotel employees from bothering you in the room and out of the room.
 
-5)
+
