@@ -22,6 +22,7 @@
 //= require semantic-ui
 
 //= require moment
+//= require jquery-ui/datepicker
 //= require bootstrap-datetimepicker
 
 
@@ -29,12 +30,12 @@
 $(window).load(function() {
 
 
-
-
-
 $('#tableSize').DataTable();
 
 
+$(function() {
+  $('#datepicker').datepicker();
+});
 
 $('.ui.dropdown')
   .dropdown()

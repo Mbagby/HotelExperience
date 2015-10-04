@@ -50,12 +50,12 @@
 			<% if @stay.do_not_disturb == false %>
 				<div id="dndButton">
 					<%= f.hidden_field :do_not_disturb, :value => true %>
-					<i class="alarm icon"></i></br><%= f.submit "Turn On&#x00A;DND".html_safe, id: "dnd"%>
+					<i class="alarm icon"></i></br><%= f.submit "Turn On&#x00A;DND".html_safe, id: "dnd", title: "Turn Do Not Disturb On"%>
 				</div>
 			<% else %>
 				<div id="dndButton">
 					<%= f.hidden_field :do_not_disturb, :value => false %>
-					<i class="alarm slash icon"></i></br><%= f.submit "Turn Off&#x00A;DND".html_safe, id: "dnd"%>
+					<i class="alarm slash icon"></i></br><%= f.submit "Turn Off&#x00A;DND".html_safe, id: "dnd", title: "Turn Do Not Disturb Off"%>
 				</div>
 			<%end %>
 		<%end%>
@@ -64,6 +64,11 @@
 			<%= link_to '<div class="featureItem" title="Submit A Maintance Request"><i class="travel icon"></i>Maintance Request</div>'.html_safe, new_user_stay_work_order_path(@user.id, @stay.id)%>
 		<%else%>
 			<div class="featureItem"><i class="comments outline icon"></i></br>Leave A Comment</div>
+		<%end%>
+
+		<% if @stay.checkout >= @currentDate %>
+			<%= link_to '<div class="featureItem" title="Schedule A Housekeeping Appointment"><i class="home icon"></i></br>House-keeping</div>'.html_safe, new_user_stay_dayservice_path(@user.id, @stay.id)%>
+			<%= link_to '<div class="featureItem" title="Schedule Turndown Service"><i class="travel icon"></i>Turndown Service</div>'.html_safe, new_user_stay_eveningservice_path(@user.id, @stay.id)%>
 		<%end%>
 
 		<%= link_to '<div class="editDeleteLink" title="Chat With A Front Desk Employee"><i class="announcement icon"></i></br>Front Desk Chat</div>'.html_safe, user_messages_path(@user.id)%>

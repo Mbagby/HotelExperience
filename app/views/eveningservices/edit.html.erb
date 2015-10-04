@@ -1,2 +1,38 @@
-<h1>Eveningservices#edit</h1>
-<p>Find me in app/views/eveningservices/edit.html.erb</p>
+<div id ="formBox">
+
+<div class="ui segment">
+	  <h2 class="ui right floated header">Schedule Turndown Service</h2>
+	  <div class="ui clearing divider"></div>
+	<div>
+
+	<div id="workOrderForm" class="ui form">
+
+
+	<%= form_for @eveningservice, url: eveningservice_path(@eveningservice) do |f| %>
+		
+
+
+	<div class="twoBlock">
+		<h4 class= "labels">Date For Turndown Service</h4>
+   		<div class="form-group" >
+   			
+			<%= f.text_field(:appointment_date, id: "datepicker", placeholder: "Click For Calendar" )%>
+		</div>
+		<h4 class= "labels">Turndown Service Time</h4>
+		<div class="form-group" >
+			<%= f.select(:appointment_time, options_for_select([["Select A Time", ""], "5:00pm", "5:30pm", "6:00pm", "6:30pm", "7:00pm", "7:30pm", "8:00pm", "8:30pm", "9:00pm"]), {:class => 'ui dropdown'}) %>
+		</div>
+	</div>
+	
+
+
+	<div>
+	  <%= f.submit "Reschedule Your Turndown Service", class: "btn btn-primary",id: "submitStay" %>
+	</div>
+	
+<% end %>
+	
+	</div>
+	</div>
+	</div>
+</div>
