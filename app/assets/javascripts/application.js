@@ -27,7 +27,7 @@
 
 
 
-$(window).load(function() {
+$(document).on('page:load', function() {
 
 
 $('#tableSize').DataTable();

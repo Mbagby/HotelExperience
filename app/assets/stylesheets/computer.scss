@@ -170,7 +170,6 @@
 				text-align: right;
 				color: #5464C0;
 				opacity: .8;
-	
 			}
 		}
 		.squareTwo{
@@ -188,9 +187,32 @@
 			display: inline-block;
 			background-color: #D9E2F6;
 			width: 32%;
+			font-size: 20px;
 			height:100%;
 			vertical-align:top;
+			p::first-letter { 
+				float: left; 
+				color: #B8860B; 
+				font-size: 65px; 
+				line-height: 50px; 
+				padding-top: 4px; 
+				padding-right: 8px; 
+				padding-left: 3px; 
+		 	}
 			p{
+				margin: 10px;
+				padding-top: 3.5%;
+				font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+			}
+			.tileLink{
+				background-color: #B8860B;
+				border-radius: 5px;
+				font-size: 20px;
+				font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+				text-align: center;
+				color: black;
+				margin: 35%;
+				margin-top: 15px;
 				padding: 5px;
 			}
 		}
@@ -209,10 +231,22 @@
 			width: 41%;
 			margin-right: 2%;
 			background-color: #E5E5E5;
+			font-size: 18px;
 			height: 100%;
 			vertical-align:top;
+			p::first-letter { 
+				float: left; 
+				color: #B8860B; 
+				font-size: 65px; 
+				line-height: 70px; 
+				padding-top: 4px; 
+				padding-right: 8px; 
+				padding-left: 3px; 
+		 	}
 			p{
-				padding: 5px;
+				margin: 10px;
+				padding-top: 2.5%;
+				font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
 			}
 		}
 		.rectangleTwo{
@@ -260,11 +294,24 @@
 			width: 22%;
 			margin-right: 2%;
 			background-color: #E5E5E5;
+			font-size: 16px;
 			height: 100%;
 			vertical-align:top;
-			h3{
-				padding: 5px;
+			p::first-letter { 
+				float: left; 
+				color: #B8860B; 
+				font-size: 65px; 
+				line-height: 60px; 
+				padding-top: 4px; 
+				padding-right: 8px; 
+				padding-left: 3px; 
+		 	}
+			p{
+				margin: 10px;
+				padding-top: 2.5%;
+				font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
 			}
+
 		}
 		.rowFourThree{
 			display: inline-block;
@@ -527,6 +574,7 @@
 				margin-top: 2.5%;
 				width: 20%;
 				background-color: #D9A134;
+				border-radius: 5px;
 				input{
 					font-size: 20px;
 					width: 100%;

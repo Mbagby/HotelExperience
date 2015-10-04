@@ -13,7 +13,9 @@
 		</div>
 		<div class= "squareTwo">
 		</div>
-		<div class= "squareThree">			
+		<div class= "squareThree">	
+			<p class="tileInfo">Start by adding a current or furture stay. Select your stay and click the tiles to access features. </p>
+			<%= link_to "New Stay", new_user_stay_path(session[:user_id]), class: "tileLink" %>	
 		</div>
 	</div>
 
@@ -37,6 +39,7 @@
 
 	<div class = "rowThree">
 		<div class="rectangleOne">
+			<p class= "tileInfo"> You are out and about enjoying the day after getting a way to early start. You come back for a relaxing nap to find housekeeping is still cleaning your room. Yes they are just doing their job and you are glad to have them do it but…maybe not right now right? Now you can select a time slot when you will be out of the room for them to make up your room in peace. </p>
 		</div>
 
 		<div class ="rectangleTwo">
@@ -46,6 +49,7 @@
 		<div class = "rowFourOne">
 		</div>
 		<div class = "rowFourTwo">
+			<p class= "tileInfo">Lightbulb out? Remote not working? Let the maintenance department know directly by submitting a description of your problem, your hotel room number, and even uplaod a picture of the issue at hand.</p>
 		</div>
 		<div class = "rowFourThree">
 		</div>
