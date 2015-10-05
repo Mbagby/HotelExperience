@@ -5,6 +5,12 @@
 /*Iphone 6*/
 
 @media screen and (min-device-width: 376px) and (max-width: 450px){
+	.tileLink{
+		display: none !important;
+	}
+	.tileInfo{
+		display: none !important;
+	}
 	#sideMenu{
 		display: none !important;
 	}
@@ -183,6 +189,9 @@
 			}
 			.squareThree{
 				display: inline-block;
+				background-image: url("Fix.jpg");
+				background-repeat:no-repeat;
+				background-size: cover;
 				background-color: #D9E2F6;
 				width: 31%;
 				height:100%;

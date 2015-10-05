@@ -176,6 +176,32 @@
 				width: 31.25%;
 				height:100%;
 				vertical-align:top;
+				p::first-letter { 
+				float: left; 
+				color: #B8860B; 
+				font-size: 65px; 
+				line-height: 50px; 
+				padding-top: 4px; 
+				padding-right: 8px; 
+				padding-left: 3px; 
+		 	}
+			p{
+				font-size: 17px;
+				margin: 10px;
+				padding-top: 3.5%;
+				font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+			}
+			.tileLink{
+				background-color: #B8860B;
+				border-radius: 5px;
+				font-size: 20px;
+				font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+				text-align: center;
+				color: black;
+				margin: 20%;
+				margin-top: 15px;
+				padding: 5px;
+			}
 			}
 		}
 		.rowThree{
@@ -194,9 +220,20 @@
 				background-color: #E5E5E5;
 				height: 100%;
 				vertical-align:top;
-				p{
-					padding: 5px;
-				}
+				p::first-letter { 
+				float: left; 
+				color: #B8860B; 
+				font-size: 65px; 
+				line-height: 70px; 
+				padding-top: 4px; 
+				padding-right: 8px; 
+				padding-left: 3px; 
+		 	}
+			p{
+				margin: 10px;
+				padding-top: 2.5%;
+				font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+			}
 			}
 			.rectangleTwo{
 				display: inline-block;
@@ -245,9 +282,20 @@
 				background-color: #E5E5E5;
 				height: 100%;
 				vertical-align:top;
-				h3{
-					padding: 5px;
-				}
+				p::first-letter { 
+				float: left; 
+				color: #B8860B; 
+				font-size: 65px; 
+				line-height: 60px; 
+				padding-top: 4px; 
+				padding-right: 8px; 
+				padding-left: 3px; 
+		 	}
+			p{
+				margin: 10px;
+				padding-top: 2.5%;
+				font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+			}
 			}
 			.rowFourThree{
 				display: inline-block;

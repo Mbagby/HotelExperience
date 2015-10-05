@@ -5,6 +5,12 @@
 
 
 @media screen and (max-width: 320px){
+	.tileLink{
+		display: none !important;
+	}
+	.tileInfo{
+		display: none !important;
+	}
 	#sideMenu{
 		display: none !important;
 	}
@@ -192,6 +198,9 @@
 			.squareThree{
 				display: inline-block;
 				background-color: #D9E2F6;
+				background-image: url("Fix.jpg");
+				background-repeat:no-repeat;
+				background-size: cover;
 				width: 31%;
 				height:100%;
 				vertical-align:top;
