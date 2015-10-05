@@ -25,6 +25,15 @@
 //= require jquery-star-rating
 //= require bootstrap-datetimepicker
 
+$(window).load(function(){
+
+    $('.ui.basic.modal')
+  .modal('show')
+;
+$("#profileButton").click(function(){
+    $('.ui.modal').modal('show');
+})
+});
 
 
 $(document).on('page:load', function() {
@@ -43,12 +52,7 @@ $(function() {
 $('.ui.dropdown')
   .dropdown()
 ;
-$('.ui.basic.modal')
-  .modal('show')
-;
-$("#profileButton").click(function(){
-    $('.ui.modal').modal('show');
-})
+
 
 
 $(function () {
