@@ -6,7 +6,7 @@ The Hotel Experience was developed to improve customer experience within any giv
    
    
 Features: 
-1) Maintance Request(Work Order)- Lightbulb out? Remote not working? Let the maintenance department know immediately by submitting a description of your problem along with your hotel room number, select a time slot for when they can come to fix or replace the issue, and even take a picture of the issue at hand. 
+1) Maintenance Request(Work Order)- Lightbulb out? Remote not working? Let the maintenance department know immediately by submitting a description of your problem along with your hotel room number, select a time slot for when they can come to fix or replace the issue, and even take a picture of the issue at hand. 
 
 2)Housekeeping Schedule- So you are out and about enjoying the day after getting a way to early start. You come back for a relaxing nap to find housekeeping is still cleaning your room. Yes they are just doing their job and you are glad to have them do it but…maybe not right now right? Now you can select a time slot when you will be out of the room for them to make up your room in peace. Even add a tip to thank them for personally for their excellent service and accommodation.
 

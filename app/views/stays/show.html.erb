@@ -64,7 +64,7 @@
 		<%end%>
 
 		<% if @stay.checkin <= @currentDate && @stay.checkout >= @currentDate %>
-			<%= link_to '<div class="featureItem" title="Submit A Maintance Request"><i class="travel icon"></i>Maintance Request</div>'.html_safe, new_user_stay_work_order_path(@user.id, @stay.id)%>
+			<%= link_to '<div class="featureItem" title="Submit A Maintenance Request"><i class="travel icon"></i>Maintenance Request</div>'.html_safe, new_user_stay_work_order_path(@user.id, @stay.id)%>
 		<%else%>
 			<div class="featureItem"><i class="comments outline icon"></i></br>Leave A Comment</div>
 		<%end%>
