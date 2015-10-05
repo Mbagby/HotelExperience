@@ -28,37 +28,25 @@
     <i class="user icon"></i>
     <%= link_to "My Profile", user_path(session[:user_id]) %>
   </div>
-  <div class="item" title="Order Room Service">
-    <i class="cocktail icon"></i>
-    <%= link_to "Room Service", user_path(session[:user_id]) %>
-  </div>
    <div class="item" title="Submit A Maintance Request">
-    <i class="warning sign icon"></i>
+    <i class="travel icon"></i>
     <%= link_to "Maintance", user_work_orders_path(session[:user_id]) %>
   </div>
    <div class="item" title="Set A Time For Housekeeping">
     <i class="home icon"></i>
-    Housekeeping
+    <%= link_to "Housekeeping", user_dayservices_path(session[:user_id]) %>
   </div>
-   <div class="item" title="Make A Spa Reservation">
-    <i class="leaf icon"></i>
-    Spa
-  </div>
-   <div class="item" title="Make A Dining Reservation">
-    <i class="food icon"></i>
-    Dining Reservations
+   <div class="item" title="Request Turndown Service">
+    <i class="moon icon"></i>
+    <%= link_to "Turndown Service", user_eveningservices_path(session[:user_id]) %>
   </div>
   <div class="item" title="Place A Do Not Disturb Hold">
     <i class="privacy icon"></i>
     Do Not Disturb
   </div>
-  <div class="item" title="Review Your Room Charges">
-    <i class="calculator icon"></i>
-    Bill Review
-  </div>
   <div class="item" title="Need Assistance? Connect With The Front Desk">
     <i class="wechat icon"></i>
-    Front Desk Chat
+    <%= link_to "Front Desk Chat", user_messages_path(session[:user_id]) %>
   </div>
   </div>
 </div>

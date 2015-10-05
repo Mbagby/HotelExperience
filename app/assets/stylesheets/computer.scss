@@ -102,6 +102,9 @@
 		}
 	}
 	#sideMenu{
+		a {
+			color:black;
+		}
 		#logo{
 			background-image: url("PlainLogo");
 			background-size: cover;
@@ -430,6 +433,36 @@
 					border: 0px solid white;
 				}
 			}
+			#titleStayFalse{
+				text-align: center;
+				display: inline-block;
+				background-color: #BCED91;
+				width: 100%;
+				min-height: 75px;
+				a{
+					font-size: 16px;
+					color: black;
+				}
+				img{
+					border-radius: 5px;
+					border: 0px solid white;
+				}
+			}
+			#titleStayTrue{
+				text-align: center;
+				display: inline-block;
+				background-color: #FF6666;
+				width: 100%;
+				min-height: 75px;
+				a{
+					font-size: 16px;
+					color: black;
+				}
+				img{
+					border-radius: 5px;
+					border: 0px solid white;
+				}
+			}
 		}
 /*User Show End*/
 
@@ -446,20 +479,17 @@
 		border-radius: 5px;
 		border: 2px solid #D9A134;
 		#infoText{
-			display: block;
 			text-align: center;
 			padding-top: 30px;
 
 		}
-		#infoText{
-			display: block;
-			text-align: center;
-
-		}
 		#newStayButton{
 			background-color: #D9A134;
+			display: block;
 			border-radius: 5px;
 			width: 110px;
+			padding-top: 10px;
+			padding-bottom: 10px;
 			display: block;
 			margin: auto;
 			text-align: center;
@@ -543,6 +573,19 @@
 
 
 /*Stays New Edit Show*/
+	#infoLabelStay{
+		height: 250px;
+		padding-top: 50px;
+		width: 79%;
+		background-image: url("HotelSuite");
+		background-size: cover;
+		color: white;
+		font-size: 22px;
+		margin-bottom: 10px;
+		font-family: 'Open Sans', sans-serif;
+		border-radius: 5px;
+		border: 2px solid #D9A134;
+	}
 	#formBox{
 		width: 79%;
 		border: 2px solid #D9A134;
@@ -672,6 +715,25 @@
 /*Stays New Edit Show End*/	
 
 /*WorkOrders New*/
+	#infoLabelWorkOrder{
+		height: 250px;
+		padding-top: 50px;
+		width: 79%;
+		background-image: url("Lightbulb");
+		background-size: cover;
+		color: white;
+		font-size: 22px;
+		margin-bottom: 10px;
+		font-family: 'Open Sans', sans-serif;
+		border-radius: 5px;
+		border: 2px solid #D9A134;
+		#infoText{
+			display: block;
+			text-align: center;
+			padding-top: 30px;
+
+		}
+	}
 	#workOrderForm{
 		margin: 1%;
 		#work_order_image{
@@ -735,6 +797,45 @@
 	}
 	.description p{
 		font-size: 20px;
+	}
+
+	#infoLabelDay{
+		height: 250px;
+		padding-top: 50px;
+		width: 79%;
+		background-image: url("House");
+		background-size: cover;
+		color: white;
+		font-size: 22px;
+		margin-bottom: 10px;
+		font-family: 'Open Sans', sans-serif;
+		border-radius: 5px;
+		border: 2px solid #D9A134;
+		#infoText{
+			display: block;
+			text-align: center;
+			padding-top: 30px;
+
+		}
+	}
+	#infoLabelNight{
+		height: 250px;
+		padding-top: 50px;
+		width: 79%;
+		background-image: url("Turndown");
+		background-size: cover;
+		color: white;
+		font-size: 22px;
+		margin-bottom: 10px;
+		font-family: 'Open Sans', sans-serif;
+		border-radius: 5px;
+		border: 2px solid #D9A134;
+		#infoText{
+			display: block;
+			text-align: center;
+			padding-top: 30px;
+
+		}
 	}
 
 }

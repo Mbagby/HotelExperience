@@ -3,6 +3,10 @@
 	<p id="infoText">Select or add a stay in order to use the features</p>
 	<div id = "newStayButton"><%= link_to "New Stay", new_user_stay_path(@user.id) %></div>
 </div>
+<div id ="infoLabel">
+	<p id="infoText">Select or add a stay in order to use the features</p>
+	<div id = "newStayButton"><%= link_to "New Stay", new_user_stay_path(@user.id) %></div>
+</div>
 
 
 
@@ -18,8 +22,9 @@
 		
 		<% if stay.checkin <= @currentDate && stay.checkout >= @currentDate %>
 		<div class ="staysShow" id="staysShowCurrent">			
-	
-			<div id= "titleStay">
+			
+			<%if stay.do_not_disturb === false %>
+			<div id= "titleStayFalse">
 			<div id="hotelStay">
 				<div id="hotelStayPic">
 					<img src = "<%= @hotels.find_by_id(stay.hotel_id).image_url%>" style="width:100px" ></img>
@@ -27,6 +32,19 @@
 			</div> 	
 				<%= link_to stay.title, user_stay_path(@user.id, stay.id)%>
 			</div>
+
+
+			<%elsif stay.do_not_disturb === true %>
+				
+			<div id= "titleStayTrue">
+			<div id="hotelStay">
+				<div id="hotelStayPic">
+					<img src = "<%= @hotels.find_by_id(stay.hotel_id).image_url%>" style="width:100px" ></img>
+				</div>
+			</div> 	
+				<%= link_to stay.title, user_stay_path(@user.id, stay.id)%>
+			</div>
+			<%end%>
 
 			<div id="hotelStayName">
 				<%= @hotels.find_by_id(stay.hotel_id).name%>
